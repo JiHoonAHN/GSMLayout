@@ -1,0 +1,6 @@
+framework module Pods_GSMLayout_Example {
+  umbrella header "Pods-GSMLayout_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

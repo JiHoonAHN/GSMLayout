@@ -28,8 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B007E41BB54831E82FA70CC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		4053CA7A7DE0BB15D720243F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2B007E41BB54831E82FA70CC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4053CA7A7DE0BB15D720243F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5734440785821EE0EACA603E /* Pods_GSMLayout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GSMLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B56C475F082F9059EAB0E93 /* Pods-GSMLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSMLayout_Tests.release.xcconfig"; path = "Target Support Files/Pods-GSMLayout_Tests/Pods-GSMLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5E6D8B5BD025566A2F9AC818 /* Pods-GSMLayout_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSMLayout_Example.release.xcconfig"; path = "Target Support Files/Pods-GSMLayout_Example/Pods-GSMLayout_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		607FACE51AFB9204008FA782 /* GSMLayout_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GSMLayout_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		ADAD42A98AF285BA815EBAC2 /* GSMLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GSMLayout.podspec; path = ../GSMLayout.podspec; sourceTree = "<group>"; };
+		ADAD42A98AF285BA815EBAC2 /* GSMLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GSMLayout.podspec; path = ../GSMLayout.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D8F98A8FA6385484BFD85B5A /* Pods_GSMLayout_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GSMLayout_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE993D9E28CD8F5C4530A0CE /* Pods-GSMLayout_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSMLayout_Example.debug.xcconfig"; path = "Target Support Files/Pods-GSMLayout_Example/Pods-GSMLayout_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F194D6E644415EC13CB7F98F /* Pods-GSMLayout_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSMLayout_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GSMLayout_Tests/Pods-GSMLayout_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +77,6 @@
 				F194D6E644415EC13CB7F98F /* Pods-GSMLayout_Tests.debug.xcconfig */,
 				5B56C475F082F9059EAB0E93 /* Pods-GSMLayout_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

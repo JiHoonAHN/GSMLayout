@@ -1,0 +1,6 @@
+framework module GSMLayout {
+  umbrella header "GSMLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}

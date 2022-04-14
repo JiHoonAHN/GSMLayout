@@ -1,0 +1,22 @@
+{
+  "name": "GSMLayout",
+  "version": "0.1.0",
+  "summary": "A short description of GSMLayout.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ahnjh1028@naver.com/GSMLayout",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ahnjh1028@naver.com": "ahnjh1028@naver.com"
+  },
+  "source": {
+    "git": "https://github.com/ahnjh1028@naver.com/GSMLayout.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "GSMLayout/Classes/**/*"
+}
