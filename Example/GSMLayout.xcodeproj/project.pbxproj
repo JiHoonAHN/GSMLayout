@@ -104,11 +104,8 @@
 		607FACD21AFB9204008FA782 /* Example for GSMLayout */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				EE1C2DA02807FB2000286127 /* App */,
+				EE1C2DA12807FB9200286127 /* UI */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for GSMLayout";
@@ -118,6 +115,8 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -148,6 +147,23 @@
 				4053CA7A7DE0BB15D720243F /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		EE1C2DA02807FB2000286127 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		EE1C2DA12807FB9200286127 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		F0608BE02F7C7A97EF751E58 /* Frameworks */ = {

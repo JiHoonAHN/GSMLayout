@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		047AD8E3F94BBBA06FA7D6E90DBFF053 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE1B3234E3C3EE16EE9D19EBA013F8 /* ReplaceMe.swift */; };
 		063A42E14341C467A9084C66BD6139FE /* Pods-GSMLayout_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A54731F6ADA371FA8DB6108F6DB5D60F /* Pods-GSMLayout_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46D2B30578A84B8AAB7258FFF268A310 /* GSMLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9A4E7AAA6DDCF814B17EEED5485105 /* GSMLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FDCFFA6AEA8B047D4F0234DC7F59F0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -16,6 +15,7 @@
 		B11549758AD5CF1CBE492EE57CF85866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		B76F4550EB15B6C6D67B502E98386E08 /* Pods-GSMLayout_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EC742696ED90CE55265FE8B5F7E7ED /* Pods-GSMLayout_Example-dummy.m */; };
 		D6A2F8B8B31A4E912EF06DD42E387450 /* Pods-GSMLayout_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A51B2991876C5A7AE77FB9025648BBC /* Pods-GSMLayout_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE1C2DA52807FC1400286127 /* UIView+GSMLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */; };
 		F729CB5FB50E2A2AE63250D2761E44A4 /* Pods-GSMLayout_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 543817C1A312BE52FCAE53EAF65BE146 /* Pods-GSMLayout_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -40,11 +40,10 @@
 		01EC742696ED90CE55265FE8B5F7E7ED /* Pods-GSMLayout_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GSMLayout_Example-dummy.m"; sourceTree = "<group>"; };
 		06DCFB25686938FF07F8CA0653D702CB /* Pods-GSMLayout_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GSMLayout_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		0A51B2991876C5A7AE77FB9025648BBC /* Pods-GSMLayout_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GSMLayout_Example-umbrella.h"; sourceTree = "<group>"; };
-		0B95E88FCAE7EC94947F0E00B7F2EC11 /* GSMLayout */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GSMLayout; path = GSMLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B95E88FCAE7EC94947F0E00B7F2EC11 /* GSMLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GSMLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D53EA429202CEB446E1A1B3A0A4E1B5 /* Pods-GSMLayout_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GSMLayout_Example"; path = Pods_GSMLayout_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2169D480B58717AFBB604C1D03E8049A /* Pods-GSMLayout_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GSMLayout_Tests-Info.plist"; sourceTree = "<group>"; };
 		351ED40DB699E72E6B7CCEF7AF629F79 /* Pods-GSMLayout_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GSMLayout_Tests.modulemap"; sourceTree = "<group>"; };
-		37EE1B3234E3C3EE16EE9D19EBA013F8 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = Sources/GSMLayout/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		3DCCF26E0FA8652B0286AA7339B73E44 /* GSMLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GSMLayout-Info.plist"; sourceTree = "<group>"; };
 		50F9BEB567171600E976E93ED4861CF2 /* GSMLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GSMLayout-prefix.pch"; sourceTree = "<group>"; };
 		543817C1A312BE52FCAE53EAF65BE146 /* Pods-GSMLayout_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GSMLayout_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		CF55BBD3A30AD9EAA8CFF86B42A09344 /* Pods-GSMLayout_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GSMLayout_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E1CDA201508181944C22BFDB1364974A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ED23A4AB359A22268D7A2A18E2D129D4 /* GSMLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GSMLayout.modulemap; sourceTree = "<group>"; };
+		EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+GSMLayout.swift"; path = "../Sources/GSMLayout/Classes/Extension/UIView+GSMLayout.swift"; sourceTree = "<group>"; };
 		EE846827877E6F8AC1FF720079D96451 /* GSMLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GSMLayout-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,7 +146,7 @@
 		4BA49549C234A74A65EA1ECCBA9FD4A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B95E88FCAE7EC94947F0E00B7F2EC11 /* GSMLayout */,
+				0B95E88FCAE7EC94947F0E00B7F2EC11 /* GSMLayout.framework */,
 				1D53EA429202CEB446E1A1B3A0A4E1B5 /* Pods-GSMLayout_Example */,
 				95F82D68160BE1ACF0BE92B094DE313D /* Pods-GSMLayout_Tests */,
 			);
@@ -215,12 +215,20 @@
 		E6E20871E7A288E955B3A2889035D4E1 /* GSMLayout */ = {
 			isa = PBXGroup;
 			children = (
-				37EE1B3234E3C3EE16EE9D19EBA013F8 /* ReplaceMe.swift */,
+				EE1C2DA22807FBC800286127 /* Extension */,
 				302485C8F09179160B1CA760F903DF25 /* Pod */,
 				BEA1718A45233813D2CC566B60FEAD78 /* Support Files */,
 			);
 			name = GSMLayout;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		EE1C2DA22807FBC800286127 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +314,7 @@
 			);
 			name = GSMLayout;
 			productName = GSMLayout;
-			productReference = 0B95E88FCAE7EC94947F0E00B7F2EC11 /* GSMLayout */;
+			productReference = 0B95E88FCAE7EC94947F0E00B7F2EC11 /* GSMLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -317,6 +325,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					760354D068C1C1543CF8852B86212B60 = {
+						LastSwiftMigration = 1330;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -383,8 +396,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE1C2DA52807FC1400286127 /* UIView+GSMLayout.swift in Sources */,
 				A561772887DBB1C460F1B9F13AFD6DA7 /* GSMLayout-dummy.m in Sources */,
-				047AD8E3F94BBBA06FA7D6E90DBFF053 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B90EAB1484465B571F41D81F9CF924C5 /* GSMLayout.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -604,6 +618,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 564A8B737A1168C98F627BE5F1D51198 /* GSMLayout.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -623,6 +638,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
