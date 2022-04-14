@@ -16,6 +16,7 @@
 		B76F4550EB15B6C6D67B502E98386E08 /* Pods-GSMLayout_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EC742696ED90CE55265FE8B5F7E7ED /* Pods-GSMLayout_Example-dummy.m */; };
 		D6A2F8B8B31A4E912EF06DD42E387450 /* Pods-GSMLayout_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A51B2991876C5A7AE77FB9025648BBC /* Pods-GSMLayout_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE1C2DA52807FC1400286127 /* UIView+GSMLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */; };
+		EE1C2DA82808000C00286127 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C2DA72808000C00286127 /* Percent.swift */; };
 		F729CB5FB50E2A2AE63250D2761E44A4 /* Pods-GSMLayout_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 543817C1A312BE52FCAE53EAF65BE146 /* Pods-GSMLayout_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		E1CDA201508181944C22BFDB1364974A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ED23A4AB359A22268D7A2A18E2D129D4 /* GSMLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GSMLayout.modulemap; sourceTree = "<group>"; };
 		EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+GSMLayout.swift"; path = "../Sources/GSMLayout/Classes/Extension/UIView+GSMLayout.swift"; sourceTree = "<group>"; };
+		EE1C2DA72808000C00286127 /* Percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Percent.swift; path = ../Sources/GSMLayout/Classes/Impl/Percent.swift; sourceTree = "<group>"; };
 		EE846827877E6F8AC1FF720079D96451 /* GSMLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GSMLayout-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				EE1C2DA22807FBC800286127 /* Extension */,
+				EE1C2DA62807FD9F00286127 /* Impl */,
 				302485C8F09179160B1CA760F903DF25 /* Pod */,
 				BEA1718A45233813D2CC566B60FEAD78 /* Support Files */,
 			);
@@ -229,6 +232,14 @@
 				EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		EE1C2DA62807FD9F00286127 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				EE1C2DA72808000C00286127 /* Percent.swift */,
+			);
+			path = Impl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE1C2DA82808000C00286127 /* Percent.swift in Sources */,
 				EE1C2DA52807FC1400286127 /* UIView+GSMLayout.swift in Sources */,
 				A561772887DBB1C460F1B9F13AFD6DA7 /* GSMLayout-dummy.m in Sources */,
 			);
