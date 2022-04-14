@@ -44,15 +44,15 @@
 		1D53EA429202CEB446E1A1B3A0A4E1B5 /* Pods-GSMLayout_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GSMLayout_Example"; path = Pods_GSMLayout_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2169D480B58717AFBB604C1D03E8049A /* Pods-GSMLayout_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GSMLayout_Tests-Info.plist"; sourceTree = "<group>"; };
 		351ED40DB699E72E6B7CCEF7AF629F79 /* Pods-GSMLayout_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GSMLayout_Tests.modulemap"; sourceTree = "<group>"; };
-		37EE1B3234E3C3EE16EE9D19EBA013F8 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GSMLayout/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		37EE1B3234E3C3EE16EE9D19EBA013F8 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = Sources/GSMLayout/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		3DCCF26E0FA8652B0286AA7339B73E44 /* GSMLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GSMLayout-Info.plist"; sourceTree = "<group>"; };
 		50F9BEB567171600E976E93ED4861CF2 /* GSMLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GSMLayout-prefix.pch"; sourceTree = "<group>"; };
 		543817C1A312BE52FCAE53EAF65BE146 /* Pods-GSMLayout_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GSMLayout_Tests-dummy.m"; sourceTree = "<group>"; };
 		564A8B737A1168C98F627BE5F1D51198 /* GSMLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GSMLayout.debug.xcconfig; sourceTree = "<group>"; };
-		583C06FC3D8B681ABACFA087D4E56CA5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		583C06FC3D8B681ABACFA087D4E56CA5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		638F901709FD92E69C2D354980B74B96 /* Pods-GSMLayout_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GSMLayout_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		69A5B89C73B081BCDD4F9C43D3D39941 /* Pods-GSMLayout_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GSMLayout_Example-Info.plist"; sourceTree = "<group>"; };
-		71DF8BC057928881E0545FB817EA2452 /* GSMLayout.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GSMLayout.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		71DF8BC057928881E0545FB817EA2452 /* GSMLayout.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GSMLayout.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7B9A4E7AAA6DDCF814B17EEED5485105 /* GSMLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GSMLayout-umbrella.h"; sourceTree = "<group>"; };
 		8F470B7BAE13115E1DD8EB707E1F5BC0 /* Pods-GSMLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GSMLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,14 +60,14 @@
 		95F82D68160BE1ACF0BE92B094DE313D /* Pods-GSMLayout_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GSMLayout_Tests"; path = Pods_GSMLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1F3D869430FF9359EFCA7180EBBCEC /* Pods-GSMLayout_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GSMLayout_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D5F008832CAE955E0E8360F41DB53AB /* Pods-GSMLayout_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GSMLayout_Example-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A54731F6ADA371FA8DB6108F6DB5D60F /* Pods-GSMLayout_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GSMLayout_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B212706B7B517CBD7D71FDADEC3372A6 /* Pods-GSMLayout_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GSMLayout_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B3166992C68331CB22B588B6250B1DDB /* Pods-GSMLayout_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GSMLayout_Example.modulemap"; sourceTree = "<group>"; };
 		B907FEFECF4A60C002584E31F149D4C9 /* Pods-GSMLayout_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GSMLayout_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B90EAB1484465B571F41D81F9CF924C5 /* GSMLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GSMLayout.release.xcconfig; sourceTree = "<group>"; };
 		CF55BBD3A30AD9EAA8CFF86B42A09344 /* Pods-GSMLayout_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GSMLayout_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E1CDA201508181944C22BFDB1364974A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E1CDA201508181944C22BFDB1364974A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ED23A4AB359A22268D7A2A18E2D129D4 /* GSMLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GSMLayout.modulemap; sourceTree = "<group>"; };
 		EE846827877E6F8AC1FF720079D96451 /* GSMLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GSMLayout-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -685,8 +685,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
