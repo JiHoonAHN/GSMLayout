@@ -11,11 +11,21 @@ import GSMLayout
 
 class ViewController: UIViewController {
 
+    private let label : UILabel = {
+        let label = UILabel()
+        label.text = "라벨"
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        view.addSubview(label)
     }
-
+    override func viewDidLayoutSubviews() {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
