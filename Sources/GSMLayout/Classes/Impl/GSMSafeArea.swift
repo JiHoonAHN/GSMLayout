@@ -31,7 +31,7 @@ internal class GSMSafeArea{
                     if #available(iOS 11.0, tvOS 11.0, *) {
                         // Do nothing, let the iOS 11+ safeAreaInsets mecanism do his thing
                     } else {
-
+                        
                     }
                 }
             }
@@ -47,6 +47,46 @@ internal class GSMSafeArea{
             GSMSafeArea.safeAreaInsetsDidChangeMode = .always
         }
     }
+}
+
+extension UIView{
+    fileprivate struct gsmlayoutAssociatedKeys {
+        static var gsmlayoutSafeAreaInsets = UnsafeMutablePointer<Int8>.allocate(capacity: 1)
+    }
+    
+    fileprivate(set) var gsmlayoutSafeAreaInsets: UIEdgeInsets {
+        get{
+            if #available(iOS 11.0, tvOS 11.0, *) { assertionFailure() }
+            
+            if GSMSafeArea.currentSafeAreaInsetsDidChangeMode == nil || GSMSafeArea.currentSafeAreaInsetsDidChangeMode == .disable{
+                if let viewController = self.next as? UIViewController{
+                    if #available(iOS 11.0, tvOS 11.0, *) {
+                        return UIEdgeInsets(top: viewController.topLayoutGuide.length, left: 0, bottom: viewController.bottomLayoutGuide.length, right: 0)
+                    }else{
+                        return UIEdgeInsets(top: viewController.topLayoutGuide.length, left: 0,
+                                            bottom: viewController.bottomLayoutGuide.length, right: 0)
+                    }
+                }else{
+                    return.zero
+                }
+            }else{
+                return objc_getAssociatedObject(self, &gsmlayoutAssociatedKeys.gsmlayoutSafeAreaInsets) as? UIEdgeInsets ?? .zero
+            }
+        }
+        set{
+            
+        }
+    }
+    
+    
+    
+    //    func gsmlayoutComputeSafeAreaInsets() -> UIEdgeInsets{
+    //        if #available(iOS 11.0, tvOS 11.0, *){
+    //            return
+    //        }else{
+    //
+    //        }
+    //    }
 }
 
 #endif
