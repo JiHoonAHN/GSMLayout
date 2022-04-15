@@ -17,6 +17,7 @@
 		D6A2F8B8B31A4E912EF06DD42E387450 /* Pods-GSMLayout_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A51B2991876C5A7AE77FB9025648BBC /* Pods-GSMLayout_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE1C2DA52807FC1400286127 /* UIView+GSMLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */; };
 		EE1C2DA82808000C00286127 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C2DA72808000C00286127 /* Percent.swift */; };
+		EE61A9B02808F022005266A0 /* GSMLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9AF2808F022005266A0 /* GSMLayout.swift */; };
 		F729CB5FB50E2A2AE63250D2761E44A4 /* Pods-GSMLayout_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 543817C1A312BE52FCAE53EAF65BE146 /* Pods-GSMLayout_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +70,9 @@
 		CF55BBD3A30AD9EAA8CFF86B42A09344 /* Pods-GSMLayout_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GSMLayout_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E1CDA201508181944C22BFDB1364974A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ED23A4AB359A22268D7A2A18E2D129D4 /* GSMLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GSMLayout.modulemap; sourceTree = "<group>"; };
-		EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+GSMLayout.swift"; path = "../Sources/GSMLayout/Classes/Extension/UIView+GSMLayout.swift"; sourceTree = "<group>"; };
-		EE1C2DA72808000C00286127 /* Percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Percent.swift; path = ../Sources/GSMLayout/Classes/Impl/Percent.swift; sourceTree = "<group>"; };
+		EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GSMLayout.swift"; sourceTree = "<group>"; };
+		EE1C2DA72808000C00286127 /* Percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Percent.swift; sourceTree = "<group>"; };
+		EE61A9AF2808F022005266A0 /* GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSMLayout.swift; sourceTree = "<group>"; };
 		EE846827877E6F8AC1FF720079D96451 /* GSMLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GSMLayout-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				E1CDA201508181944C22BFDB1364974A /* README.md */,
 			);
 			name = Pod;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		468A6580D6EA0B48BCD08EC699019127 /* Pods-GSMLayout_Example */ = {
@@ -183,7 +186,7 @@
 				B90EAB1484465B571F41D81F9CF924C5 /* GSMLayout.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "Example/Pods/Target Support Files/GSMLayout";
+			path = "../../../Example/Pods/Target Support Files/GSMLayout";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -217,14 +220,16 @@
 		E6E20871E7A288E955B3A2889035D4E1 /* GSMLayout */ = {
 			isa = PBXGroup;
 			children = (
+				EE61A9AF2808F022005266A0 /* GSMLayout.swift */,
+				EE61A9AE2808F011005266A0 /* DSLs */,
 				EE1C2DA22807FBC800286127 /* Extension */,
 				EE1C2DA62807FD9F00286127 /* Impl */,
 				302485C8F09179160B1CA760F903DF25 /* Pod */,
 				BEA1718A45233813D2CC566B60FEAD78 /* Support Files */,
 			);
 			name = GSMLayout;
-			path = ../..;
-			sourceTree = "<group>";
+			path = ../../Sources/GSMLayout/Classes;
+			sourceTree = SOURCE_ROOT;
 		};
 		EE1C2DA22807FBC800286127 /* Extension */ = {
 			isa = PBXGroup;
@@ -240,6 +245,13 @@
 				EE1C2DA72808000C00286127 /* Percent.swift */,
 			);
 			path = Impl;
+			sourceTree = "<group>";
+		};
+		EE61A9AE2808F011005266A0 /* DSLs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DSLs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +422,7 @@
 				EE1C2DA82808000C00286127 /* Percent.swift in Sources */,
 				EE1C2DA52807FC1400286127 /* UIView+GSMLayout.swift in Sources */,
 				A561772887DBB1C460F1B9F13AFD6DA7 /* GSMLayout-dummy.m in Sources */,
+				EE61A9B02808F022005266A0 /* GSMLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
