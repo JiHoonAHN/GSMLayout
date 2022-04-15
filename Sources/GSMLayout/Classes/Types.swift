@@ -7,11 +7,17 @@
 
 import Foundation
 
-/// UIViews's anchor definition
-@objc public protocol Anchor {
+@objc public protocol Anchor{
+}
+
+@objc public protocol AnchorList{
+    
 }
 
 
+
+
+/// UIViews's anchor definition
 @objc public enum LayoutDirection : Int{
     case auto
     case ltr

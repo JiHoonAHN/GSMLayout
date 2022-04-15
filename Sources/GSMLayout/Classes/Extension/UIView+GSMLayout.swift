@@ -16,7 +16,6 @@ extension UIView : Layoutable, SizeCalculable{
         return GSMLayout(view: self, keepTransform: true)
     }
     
-    
     public func getRect(keepTransform: Bool) -> CGRect {
         guard !GSM.autoSizingInProgress || autoSizingRect == nil else{return autoSizingRect ?? CGRect.zero}
         if keepTransform{
