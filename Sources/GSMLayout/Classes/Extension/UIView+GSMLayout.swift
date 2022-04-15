@@ -10,9 +10,7 @@ import Foundation
 #if os(iOS) || os(tvOS)
 import UIKit
 
-extension UIView : Layoutable{
-
-    
+extension UIView : Layoutable, SizeCalculable{
     
     public var gsm : GSMLayout<UIView>{
         return GSMLayout(view: self, keepTransform: true)
@@ -21,7 +19,14 @@ extension UIView : Layoutable{
     
     public func getRect(keepTransform: Bool) -> CGRect {
         guard !GSM.autoSizingInProgress || autoSizingRect == nil else{return autoSizingRect ?? CGRect.zero}
-        return frame
+        if keepTransform{
+            let size = bounds.size
+            let origin = CGPoint(x: center.x - (size.width * layer.anchorPoint.x),
+                                 y: center.y - (size.height * layer.anchorPoint.y))
+            return CGRect(origin: origin, size: size)
+        }else{
+            return frame
+        }
     }
     
     public func setRect(_ rect: CGRect, keepTransform: Bool) {

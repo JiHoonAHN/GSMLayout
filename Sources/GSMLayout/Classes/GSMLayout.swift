@@ -32,10 +32,21 @@ public class GSMLayout<View: Layoutable> {
     
     deinit{
         if !isLayouted && GSM.logMissingLayoutCalls{
-            
+            warn("GSMLayout commands have been issued without calling the 'layout()' method to complete the layout. (These warnings can be disabled by setting GSM.logMissingLayoutCalls to false)")
         }
         
     }
     
+    #if os(iOS) || os(tvOS)
+    public var safeArea : PEdgeInsets{
+        if let view = view as? UIView{
+            if #available(iOS 11.0 , tvOS 10.0 , *){
+                return view.safeAreaInsets
+            }else{
+                return UIEdgeInsets() //MARK: <- 수정해야됨
+            }
+        }
+    }
+    #endif
     
 }
