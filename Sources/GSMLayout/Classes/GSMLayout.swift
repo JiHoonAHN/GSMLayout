@@ -16,13 +16,26 @@ import Foundation
 #endif
 
 public class GSMLayout<View: Layoutable> {
-    internal let view : UIView
-    internal let keepTransform: Bool
+    let view : UIView
+    let keepTransform: Bool
 
+    var isLayouted = false
+
+    
     init(view : UIView,keepTransform : Bool){
         self.view = view
         self.keepTransform = keepTransform
+        #if os(iOS) || os(tvOS)
+        GSM.initGSMLayout()
+        #endif
+    }
+    
+    deinit{
+        if !isLayouted && GSM.logMissingLayoutCalls{
+            
+        }
         
     }
+    
     
 }
