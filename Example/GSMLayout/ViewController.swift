@@ -23,7 +23,9 @@ class ViewController: UIViewController {
         view.addSubview(label)
     }
     override func viewDidLayoutSubviews() {
-        
+        label.gsm.makeConstraints {
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {

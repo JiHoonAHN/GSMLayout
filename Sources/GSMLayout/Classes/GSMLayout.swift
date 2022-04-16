@@ -16,13 +16,12 @@ import Foundation
 #endif
 
 public class GSMLayout<View: Layoutable> {
-    let view : UIView
+    let view : View
     let keepTransform: Bool
 
     var isLayouted = false
-
     
-    init(view : UIView,keepTransform : Bool){
+    init(view : View,keepTransform : Bool){
         self.view = view
         self.keepTransform = keepTransform
         #if os(iOS) || os(tvOS)
@@ -34,7 +33,6 @@ public class GSMLayout<View: Layoutable> {
         if !isLayouted && GSM.logMissingLayoutCalls{
             warn("GSMLayout commands have been issued without calling the 'layout()' method to complete the layout. (These warnings can be disabled by setting GSM.logMissingLayoutCalls to false)")
         }
-        
     }
     
     #if os(iOS) || os(tvOS)
@@ -43,10 +41,43 @@ public class GSMLayout<View: Layoutable> {
             if #available(iOS 11.0 , tvOS 10.0 , *){
                 return view.safeAreaInsets
             }else{
-                return UIEdgeInsets() //MARK: <- 수정해야됨
+                return view.gsmlayoutComputeSafeAreaInsets()
             }
+        }else{
+            return .zero
         }
     }
     #endif
+
+#if os(iOS) && compiler(>=5.5) // Xcode 13+
+public var keyboardArea: CGRect {
+    guard #available(iOS 15.0, *) else { return .zero }
+    guard let view = view as? UIView else { return .zero }
+    
+    return view.keyboardLayoutGuide.layoutFrame
+}
+#endif
+    
+    
+    @discardableResult
+    public func makeConstraints(_ closure: () -> Void) {
+        
+    }
+    
+    @discardableResult
+    public func remakeConstraints(_ closure: () -> Void) {
+        
+    }
+    
+    @discardableResult
+    public func updateConstraints(_ closure: () -> Void) {
+        
+    }
+    
+    @discardableResult
+    public func removeConstraints() {
+        
+    }
+    
     
 }

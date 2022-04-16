@@ -27,4 +27,5 @@ class EdgeListImpl<View : Layoutable> {
         self.view = view
     }
     
+
 }

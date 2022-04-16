@@ -25,10 +25,9 @@
 		EE61A9CE280908E2005266A0 /* GSMLayout+Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9CD280908E2005266A0 /* GSMLayout+Warning.swift */; };
 		EE61A9D028090F61005266A0 /* AutoSizeCalculable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9CF28090F61005266A0 /* AutoSizeCalculable.swift */; };
 		EE61A9D2280914E9005266A0 /* SizeCalculable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9D1280914E8005266A0 /* SizeCalculable.swift */; };
-		EE61A9D428092FC4005266A0 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9D328092FC4005266A0 /* ConstraintLayoutGuideDSL.swift */; };
 		EE61A9D7280931C3005266A0 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9D6280931C3005266A0 /* Coordinates.swift */; };
-		EE61A9D9280934BE005266A0 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9D8280934BE005266A0 /* ConstraintMakerExtendable.swift */; };
 		EE61A9DB280938BF005266A0 /* TypesImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9DA280938BF005266A0 /* TypesImpl.swift */; };
+		EE61A9F428094F28005266A0 /* Layoutable+GSMLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9F328094F28005266A0 /* Layoutable+GSMLayout.swift */; };
 		F729CB5FB50E2A2AE63250D2761E44A4 /* Pods-GSMLayout_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 543817C1A312BE52FCAE53EAF65BE146 /* Pods-GSMLayout_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -91,10 +90,9 @@
 		EE61A9CD280908E2005266A0 /* GSMLayout+Warning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+Warning.swift"; sourceTree = "<group>"; };
 		EE61A9CF28090F61005266A0 /* AutoSizeCalculable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizeCalculable.swift; sourceTree = "<group>"; };
 		EE61A9D1280914E8005266A0 /* SizeCalculable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCalculable.swift; sourceTree = "<group>"; };
-		EE61A9D328092FC4005266A0 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		EE61A9D6280931C3005266A0 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
-		EE61A9D8280934BE005266A0 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
 		EE61A9DA280938BF005266A0 /* TypesImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesImpl.swift; sourceTree = "<group>"; };
+		EE61A9F328094F28005266A0 /* Layoutable+GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Layoutable+GSMLayout.swift"; sourceTree = "<group>"; };
 		EE846827877E6F8AC1FF720079D96451 /* GSMLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GSMLayout-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,11 +246,11 @@
 				EE61A9C72808FB5A005266A0 /* Layoutable.swift */,
 				EE61A9C52808F96E005266A0 /* GSM.swift */,
 				EE61A9AF2808F022005266A0 /* GSMLayout.swift */,
-				EE61A9AE2808F011005266A0 /* DSLs */,
 				EE1C2DA22807FBC800286127 /* Extension */,
 				EE1C2DA62807FD9F00286127 /* Impl */,
 				302485C8F09179160B1CA760F903DF25 /* Pod */,
 				BEA1718A45233813D2CC566B60FEAD78 /* Support Files */,
+				EE61A9F328094F28005266A0 /* Layoutable+GSMLayout.swift */,
 			);
 			name = GSMLayout;
 			path = ../../Sources/GSMLayout/Classes;
@@ -276,15 +274,6 @@
 				EE61A9DA280938BF005266A0 /* TypesImpl.swift */,
 			);
 			path = Impl;
-			sourceTree = "<group>";
-		};
-		EE61A9AE2808F011005266A0 /* DSLs */ = {
-			isa = PBXGroup;
-			children = (
-				EE61A9D328092FC4005266A0 /* ConstraintLayoutGuideDSL.swift */,
-				EE61A9D8280934BE005266A0 /* ConstraintMakerExtendable.swift */,
-			);
-			path = DSLs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,12 +444,11 @@
 				EE61A9CE280908E2005266A0 /* GSMLayout+Warning.swift in Sources */,
 				EE1C2DA82808000C00286127 /* Percent.swift in Sources */,
 				EE1C2DA52807FC1400286127 /* UIView+GSMLayout.swift in Sources */,
-				EE61A9D9280934BE005266A0 /* ConstraintMakerExtendable.swift in Sources */,
 				A561772887DBB1C460F1B9F13AFD6DA7 /* GSMLayout-dummy.m in Sources */,
 				EE61A9CC2808FFE6005266A0 /* Types.swift in Sources */,
 				EE61A9DB280938BF005266A0 /* TypesImpl.swift in Sources */,
-				EE61A9D428092FC4005266A0 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				EE61A9D028090F61005266A0 /* AutoSizeCalculable.swift in Sources */,
+				EE61A9F428094F28005266A0 /* Layoutable+GSMLayout.swift in Sources */,
 				EE61A9C82808FB5A005266A0 /* Layoutable.swift in Sources */,
 				EE61A9CA2808FDF6005266A0 /* GSMSafeArea.swift in Sources */,
 				EE61A9D7280931C3005266A0 /* Coordinates.swift in Sources */,

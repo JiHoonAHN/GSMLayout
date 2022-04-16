@@ -11,7 +11,12 @@ import Foundation
 }
 
 @objc public protocol AnchorList{
-    
+    var left : Anchor {get}
+    var right : Anchor {get}
+    var top : Anchor {get}
+    var bottom : Anchor {get}
+    var leading : Anchor {get}
+    var trailing : Anchor {get}
 }
 
 
