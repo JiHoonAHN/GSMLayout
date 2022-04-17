@@ -20,10 +20,15 @@ private var numberFormatter: NumberFormatter = {
 
 extension GSMLayout{
     
-//    func warnWontBeApplied(_ text: String, _ context: Context) {
-//        guard GSM.logWarnings else {return}
-//        warn("\(context)")
-//    }
+    func relativeAnchorContext(method : String, anchor: Anchor) -> String{
+//        let anchor = anchor as! Anchor
+        return ""
+    }
+    
+    func warnWontBeApplied(_ text: String, _ context: Context) {
+        guard GSM.logWarnings else {return}
+        warn("\(context()) won't be applied, \(text)")
+    }
     
     func warn(_ message : String) {
         guard GSM.logWarnings else {return}
