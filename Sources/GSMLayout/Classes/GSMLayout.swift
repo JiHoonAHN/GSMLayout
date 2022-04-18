@@ -57,24 +57,19 @@ public var keyboardArea: CGRect {
     return view.keyboardLayoutGuide.layoutFrame
 }
 #endif
-    
-    
-    @discardableResult
-    public func makeConstraints(_ closure: () -> Void) {
+
+    public func makeConstraints(_ closure: (ConstraintMaker) -> Void) {
         
     }
     
-    @discardableResult
-    public func remakeConstraints(_ closure: () -> Void) {
+    public func remakeConstraints(_ closure: (ConstraintMaker) -> Void) {
         
     }
     
-    @discardableResult
-    public func updateConstraints(_ closure: () -> Void) {
+    public func updateConstraints(_ closure: (ConstraintMaker) -> Void) {
         
     }
     
-    @discardableResult
     public func removeConstraints() {
         
     }

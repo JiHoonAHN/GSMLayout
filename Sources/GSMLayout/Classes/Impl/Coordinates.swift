@@ -14,7 +14,7 @@ import AppKit
 internal var displayScale: CGFloat = getDisplayScale()
 internal var onePixelLength: CGFloat = 1 / displayScale
 
-public func _pinlayoutSetUnitTest(scale: CGFloat?) {
+public func _gsmlayoutSetUnitTest(scale: CGFloat?) {
     if let scale = scale {
         displayScale = scale
     } else {

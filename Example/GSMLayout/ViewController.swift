@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         label.gsm.makeConstraints {
-            
+            $0.right.left
         }
     }
     
