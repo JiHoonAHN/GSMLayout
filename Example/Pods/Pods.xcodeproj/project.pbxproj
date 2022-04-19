@@ -33,6 +33,9 @@
 		EE9F69D1280E7EE500799034 /* GSMLayout+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F69D0280E7EE500799034 /* GSMLayout+Size.swift */; };
 		EE9F69D3280E941700799034 /* GSMLayout+WrapContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F69D2280E941700799034 /* GSMLayout+WrapContent.swift */; };
 		EE9F69D5280EB24F00799034 /* GSMLayout+Layouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F69D4280EB24F00799034 /* GSMLayout+Layouting.swift */; };
+		EE9F6A04280ECEE300799034 /* PEdgeInsets+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F6A03280ECEE300799034 /* PEdgeInsets+Operators.swift */; };
+		EE9F6A0A280ED5DE00799034 /* NSView+GSMLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F6A09280ED5DE00799034 /* NSView+GSMLayout.swift */; };
+		EE9F6A0C280ED61E00799034 /* CALayer+GSMLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F6A0B280ED61E00799034 /* CALayer+GSMLayout.swift */; };
 		EED18D61280D855D00B3F508 /* GSMLayout+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED18D60280D855D00B3F508 /* GSMLayout+Coordinates.swift */; };
 		F729CB5FB50E2A2AE63250D2761E44A4 /* Pods-GSMLayout_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 543817C1A312BE52FCAE53EAF65BE146 /* Pods-GSMLayout_Tests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -105,6 +108,9 @@
 		EE9F69D0280E7EE500799034 /* GSMLayout+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+Size.swift"; sourceTree = "<group>"; };
 		EE9F69D2280E941700799034 /* GSMLayout+WrapContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+WrapContent.swift"; sourceTree = "<group>"; };
 		EE9F69D4280EB24F00799034 /* GSMLayout+Layouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+Layouting.swift"; sourceTree = "<group>"; };
+		EE9F6A03280ECEE300799034 /* PEdgeInsets+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PEdgeInsets+Operators.swift"; sourceTree = "<group>"; };
+		EE9F6A09280ED5DE00799034 /* NSView+GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+GSMLayout.swift"; sourceTree = "<group>"; };
+		EE9F6A0B280ED61E00799034 /* CALayer+GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+GSMLayout.swift"; sourceTree = "<group>"; };
 		EED18D60280D855D00B3F508 /* GSMLayout+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+Coordinates.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -275,6 +281,9 @@
 			isa = PBXGroup;
 			children = (
 				EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */,
+				EE9F6A09280ED5DE00799034 /* NSView+GSMLayout.swift */,
+				EE9F6A03280ECEE300799034 /* PEdgeInsets+Operators.swift */,
+				EE9F6A0B280ED61E00799034 /* CALayer+GSMLayout.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -469,15 +478,18 @@
 				EE61A9F428094F28005266A0 /* Layoutable+GSMLayout.swift in Sources */,
 				EE9F69D5280EB24F00799034 /* GSMLayout+Layouting.swift in Sources */,
 				EE331906280D118E00766EBB /* Filters.swift in Sources */,
+				EE9F6A0C280ED61E00799034 /* CALayer+GSMLayout.swift in Sources */,
 				EE61A9C82808FB5A005266A0 /* Layoutable.swift in Sources */,
 				EE61A9CA2808FDF6005266A0 /* GSMSafeArea.swift in Sources */,
 				EED18D61280D855D00B3F508 /* GSMLayout+Coordinates.swift in Sources */,
+				EE9F6A0A280ED5DE00799034 /* NSView+GSMLayout.swift in Sources */,
 				EE9F69D1280E7EE500799034 /* GSMLayout+Size.swift in Sources */,
 				EE9F698F280E46E800799034 /* Types+Description.swift in Sources */,
 				EE9F69D3280E941700799034 /* GSMLayout+WrapContent.swift in Sources */,
 				EE61A9D7280931C3005266A0 /* Coordinates.swift in Sources */,
 				EE61A9B02808F022005266A0 /* GSMLayout.swift in Sources */,
 				EE61A9D2280914E9005266A0 /* SizeCalculable.swift in Sources */,
+				EE9F6A04280ECEE300799034 /* PEdgeInsets+Operators.swift in Sources */,
 				EE61A9C62808F96E005266A0 /* GSM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

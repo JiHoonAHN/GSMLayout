@@ -119,7 +119,7 @@ extension GSMLayout{
                 warnWontBeApplied("the aspectRatio (\(ratio)) must be greater than zero.", context)
                 return self
             } else if type.requiresSizeCalculable, !(view is SizeCalculable) {
-                warnWontBeApplied("PinLayout cannot comptute this view's size. This type of views doesn't conform to the protocol SizeCalculable.", context)
+                warnWontBeApplied("GSMLayout cannot comptute this view's size. This type of views doesn't conform to the protocol SizeCalculable.", context)
                 return self
             }
         }
@@ -139,6 +139,6 @@ extension GSMLayout{
             conflict = "aspectRatio(\(ratio))"
         }
 
-        warn("PinLayout Conflict: \(context()) won't be applied since it conflicts with \(conflict).")
+        warn("GSMLayout Conflict: \(context()) won't be applied since it conflicts with \(conflict).")
     }
 }

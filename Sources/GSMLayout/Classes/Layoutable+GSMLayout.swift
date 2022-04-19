@@ -7,13 +7,12 @@
 
 import Foundation
 
-extension Layoutable{
-    public var anchor : AnchorList{
+extension Layoutable {
+    public var anchor: AnchorList {
         return AnchorListImpl(view: self as! View)
     }
-    
-    public var edge: EdgeList{
+
+    public var edge: EdgeList {
         return EdgeListImpl(view: self as! View)
     }
-
 }

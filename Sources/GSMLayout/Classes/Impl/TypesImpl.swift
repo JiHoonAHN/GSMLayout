@@ -8,16 +8,16 @@
 import Foundation
 
 #if os(iOS) || os(tvOS)
-import UIKit
+    import UIKit
 #else
-import AppKit
+    import AppKit
 #endif
 
 typealias Context = () -> String
 
-struct Size{
-    var width : CGFloat?
-    var height : CGFloat?
+struct Size {
+    var width: CGFloat?
+    var height: CGFloat?
 }
 
 class EdgeListImpl<View: Layoutable>: EdgeList {
@@ -66,16 +66,16 @@ class HorizontalEdgeImpl<View: Layoutable>: HorizontalEdge {
     }
 }
 
-class VerticalEdgeImpl<View : Layoutable> : VerticalEdge{
-    enum EdgeType : String{
+class VerticalEdgeImpl<View: Layoutable>: VerticalEdge {
+    enum EdgeType: String {
         case top
         case vCenter
         case bottom
     }
     
-    let view : View
-    let type : EdgeType
-    
+    internal let view: View
+    internal let type: EdgeType
+
     func y(keepTransform: Bool) -> CGFloat {
         let rect = view.getRect(keepTransform: keepTransform)
         
@@ -83,23 +83,23 @@ class VerticalEdgeImpl<View : Layoutable> : VerticalEdge{
         case .top:     return rect.origin.y
         case .vCenter: return rect.midY
         case .bottom:  return rect
-                .maxY
+            .maxY
         }
     }
-    
+
     internal init(view: View, type: EdgeType) {
         self.view = view
         self.type = type
     }
 }
 
-class AnchorListImpl<View : Layoutable> : AnchorList{
-    let view : View
-    
-    init(view : View){
+class AnchorListImpl<View: Layoutable>: AnchorList {
+    internal let view: View
+
+    internal init(view: View) {
         self.view = view
     }
-    
+
     var topLeft: Anchor { return AnchorImpl(view: view, type: .topLeft) }
     var topCenter: Anchor { return AnchorImpl(view: view, type: .topCenter) }
     var topRight: Anchor { return AnchorImpl(view: view, type: .topRight) }
@@ -117,8 +117,8 @@ class AnchorListImpl<View : Layoutable> : AnchorList{
     var centerEnd: Anchor { return view.isLTR() ? centerRight : centerLeft }
     var bottomStart: Anchor { return view.isLTR() ? bottomLeft : bottomRight }
     var bottomEnd: Anchor { return view.isLTR() ? bottomRight : bottomLeft }
-    
 }
+
 enum AnchorType: String {
     case topLeft
     case topCenter

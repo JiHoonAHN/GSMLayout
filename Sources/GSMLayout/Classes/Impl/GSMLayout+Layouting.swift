@@ -11,8 +11,9 @@
     import AppKit
 #endif
 
-extension GSMLayout{
-    
+// MARK: UIView's frame computation methods
+extension GSMLayout {
+
     public func layout() {
         apply()
     }

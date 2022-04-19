@@ -7,10 +7,11 @@
 
 import Foundation
 
-@objc public protocol Anchor{
+@objc public protocol Anchor {
 }
 
-@objc public protocol AnchorList{
+/// UIViews's list of anchors.
+@objc public protocol AnchorList {
     var topLeft: Anchor { get }
     var topCenter: Anchor { get }
     var topRight: Anchor { get }
@@ -20,7 +21,7 @@ import Foundation
     var bottomLeft: Anchor { get }
     var bottomCenter: Anchor { get }
     var bottomRight: Anchor { get }
-    
+
     // RTL support
     var topStart: Anchor { get }
     var topEnd: Anchor { get }

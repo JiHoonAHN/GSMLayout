@@ -58,7 +58,6 @@ extension GSMLayout{
         gsmLayoutConsoleWarning("GSMLayout Conflict: \(context()) won't be applied since it value has already been set to CGSize(width: \(propertyValue.width.description), height: \(propertyValue.height.description)).", view)
     }
     
-    
     func warnConflict(_ context : Context, _ properties : [String : Any]){
         guard GSM.logWarnings else {return}
         var warning = "GSMLayout Conflict: \(context()) won't be applied since it conflicts with the following already set properties:"
@@ -72,6 +71,7 @@ extension GSMLayout{
         }
         gsmLayoutConsoleWarning(warning, view)
     }
+    
     func displayLayoutWarnings() {
         if !Thread.isMainThread {
             warn("Layout must be executed from the Main Thread!")
@@ -99,6 +99,7 @@ extension GSMLayout{
             }
         }
     }
+    
     func viewDescription(_ view: View) -> String {
         let rect = view.getRect(keepTransform: keepTransform)
         return "(\(viewName(view)), Frame: \(rect))"
@@ -136,8 +137,9 @@ extension GSMLayout{
             displayText += ", Superviews: \(hierarchy.flatMap({ $0 }).joined(separator: " -> "))"
             #endif
         }
+        displayText += ", Debug description: \(view.debugDescription))\n"
+
+        print(displayText)
+        GSM.lastWarningText = message
     }
-    
-    
-    
 }

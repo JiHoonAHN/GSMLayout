@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GSMLayout
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.backgroundColor = UIColor.white
-        window!.rootViewController = UINavigationController(rootViewController: ViewController())
+        window!.rootViewController = UIViewController()
         window!.makeKeyAndVisible()
 
         return true

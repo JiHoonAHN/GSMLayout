@@ -21,18 +21,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(label)
-        view.backgroundColor = .white
+        configureUI()
     }
-
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        label.gsm.size(100%)
+        configureUI()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func configureUI(){
+        label.gsm.top().left().right().bottom()
     }
-
 }
 

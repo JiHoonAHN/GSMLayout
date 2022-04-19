@@ -22,7 +22,7 @@ public func _gsmlayoutSetUnitTest(scale: CGFloat?) {
     }
 }
 
-final class Coordinates<View: Layoutable>{
+final class Coordinates<View: Layoutable> {
     static func hCenter(_ view: View, keepTransform: Bool) -> CGFloat {
         let rect = view.getRect(keepTransform: keepTransform)
         return rect.minX + (rect.width / 2)
@@ -92,9 +92,7 @@ final class Coordinates<View: Layoutable>{
     static func ceilFloatToDisplayScale(_ pointValue: CGFloat) -> CGFloat {
         return CGFloat(ceilf(Float(pointValue * displayScale))) / displayScale
     }
-    
 }
-
 
 private func getDisplayScale() -> CGFloat {
     #if os(iOS) || os(tvOS)
