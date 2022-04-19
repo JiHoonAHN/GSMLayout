@@ -100,7 +100,65 @@ internal class GSMSafeArea{
         }
     }
 }
+struct GSMLayoutSwizzling {
+    typealias ViewWillLayoutSubviewsFunction = @convention(c) (UIViewController, Selector) -> Void
+    typealias ViewWillLayoutSubviewsBlock = @convention(block) (UIViewController, Selector) -> Void
+    static var originalImplementation: IMP?
 
+    static fileprivate func swizzleViewWillLayoutSubviews() {
+        let swizzledBlock: ViewWillLayoutSubviewsBlock = { calledViewController, selector in
+            if let originalImplementation = originalImplementation {
+                let viewWillLayoutSubviews: ViewWillLayoutSubviewsFunction = unsafeBitCast(originalImplementation, to: ViewWillLayoutSubviewsFunction.self)
+                viewWillLayoutSubviews(calledViewController, selector)
+            }
+            GSMLayoutSwizzling.gsmlayoutViewWillLayoutSubviews(viewController: calledViewController)
+        }
+        originalImplementation = swizzleViewWillLayoutSubviews(UIViewController.self, to: swizzledBlock)
+    }
+
+    static fileprivate func removeViewWillLayoutSubviewsSwizzle() {
+        let selector = #selector(UIViewController.viewWillLayoutSubviews)
+        guard let originalImplementation = originalImplementation else { return }
+        guard let method = class_getInstanceMethod(UIViewController.self, selector) else { return }
+
+        method_setImplementation(method, originalImplementation)
+        self.originalImplementation = nil
+    }
+
+    static private func gsmlayoutViewWillLayoutSubviews(viewController: UIViewController) {
+        if #available(iOS 11.0, tvOS 11.0, *) { assertionFailure() }
+
+        if let view = viewController.view {
+            let safeAreaInsets: UIEdgeInsets
+            
+            if #available(iOS 11.0, tvOS 11.0, *) {
+                safeAreaInsets = UIEdgeInsets(top: viewController.view.safeAreaInsets.top, left: 0,
+                                                  bottom: viewController.view.safeAreaInsets.bottom, right: 0)
+            } else {
+                safeAreaInsets = UIEdgeInsets(top: viewController.topLayoutGuide.length, left: 0,
+                                              bottom: viewController.bottomLayoutGuide.length, right: 0)
+            }
+
+            // Set children safeArea up to 3 level, to limit the performance issue of computing this compatibilitySafeAreaInsets
+            GSMSafeArea.setViewSafeAreaInsets(view: view, insets: safeAreaInsets, recursiveLevel: 3)
+        }
+    }
+
+    static private func swizzleViewWillLayoutSubviews(_ class_: AnyClass, to block: @escaping ViewWillLayoutSubviewsBlock) -> IMP? {
+        let selector = #selector(UIViewController.viewWillLayoutSubviews)
+        let method = class_getInstanceMethod(class_, selector)
+        let newImplementation = imp_implementationWithBlock(unsafeBitCast(block, to: AnyObject.self))
+
+        if let method = method {
+            let oldImplementation = method_getImplementation(method)
+            method_setImplementation(method, newImplementation)
+            return oldImplementation
+        } else {
+            class_addMethod(class_, selector, newImplementation, "")
+            return nil
+        }
+    }
+}
 extension UIView{
     fileprivate struct gsmlayoutAssociatedKeys {
         static var gsmlayoutSafeAreaInsets = UnsafeMutablePointer<Int8>.allocate(capacity: 1)

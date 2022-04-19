@@ -14,24 +14,21 @@ class ViewController: UIViewController {
     private let label : UILabel = {
         let label = UILabel()
         label.text = "라벨"
+        label.backgroundColor = .red
         return label
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         view.addSubview(label)
+        configureUI()
     }
     override func viewDidLayoutSubviews() {
-        label.gsm.makeConstraints {
-            
-        }
+        super.viewDidLayoutSubviews()
+        configureUI()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func configureUI(){
+        label.gsm.top().left().right().bottom()
     }
-
 }
 

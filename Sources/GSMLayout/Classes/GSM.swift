@@ -10,6 +10,15 @@ import Foundation
 @objc public class GSM : NSObject{
     @objc public static var layoutDirection = LayoutDirection.ltr
     
+    
+    #if os(iOS) || os(tvOS)
+    @objc public static var safeAreaInsetsDidChangeMode : GSMSafeAreaInsetsDidChangeMode = .optIn{
+        didSet{
+            GSMSafeArea.safeAreaInsetsDidChangeMode = safeAreaInsetsDidChangeMode
+        }
+    }
+    #endif
+    
     static private var isInitialized = false
     
     @objc public static func initGSMLayout() {
