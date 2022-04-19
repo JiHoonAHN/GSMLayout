@@ -29,10 +29,11 @@
 		EE61A9D7280931C3005266A0 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9D6280931C3005266A0 /* Coordinates.swift */; };
 		EE61A9DB280938BF005266A0 /* TypesImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9DA280938BF005266A0 /* TypesImpl.swift */; };
 		EE61A9F428094F28005266A0 /* Layoutable+GSMLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9F328094F28005266A0 /* Layoutable+GSMLayout.swift */; };
-		EE9ECA31280C2D7F00B88375 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9ECA30280C2D7F00B88375 /* ConstraintMaker.swift */; };
-		EEB7824E280CEC9B00F25E03 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB7824D280CEC9B00F25E03 /* ConstraintMakerExtendable.swift */; };
-		EEB78251280D09AA00F25E03 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB78250280D09AA00F25E03 /* ConstraintAttributes.swift */; };
-		EEB78253280D0DCE00F25E03 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB78252280D0DCE00F25E03 /* LayoutConstraintItem.swift */; };
+		EE9F698F280E46E800799034 /* Types+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F698E280E46E800799034 /* Types+Description.swift */; };
+		EE9F69D1280E7EE500799034 /* GSMLayout+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F69D0280E7EE500799034 /* GSMLayout+Size.swift */; };
+		EE9F69D3280E941700799034 /* GSMLayout+WrapContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F69D2280E941700799034 /* GSMLayout+WrapContent.swift */; };
+		EE9F69D5280EB24F00799034 /* GSMLayout+Layouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F69D4280EB24F00799034 /* GSMLayout+Layouting.swift */; };
+		EED18D61280D855D00B3F508 /* GSMLayout+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED18D60280D855D00B3F508 /* GSMLayout+Coordinates.swift */; };
 		F729CB5FB50E2A2AE63250D2761E44A4 /* Pods-GSMLayout_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 543817C1A312BE52FCAE53EAF65BE146 /* Pods-GSMLayout_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -100,10 +101,11 @@
 		EE61A9DA280938BF005266A0 /* TypesImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesImpl.swift; sourceTree = "<group>"; };
 		EE61A9F328094F28005266A0 /* Layoutable+GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Layoutable+GSMLayout.swift"; sourceTree = "<group>"; };
 		EE846827877E6F8AC1FF720079D96451 /* GSMLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GSMLayout-dummy.m"; sourceTree = "<group>"; };
-		EE9ECA30280C2D7F00B88375 /* ConstraintMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
-		EEB7824D280CEC9B00F25E03 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
-		EEB78250280D09AA00F25E03 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
-		EEB78252280D0DCE00F25E03 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
+		EE9F698E280E46E800799034 /* Types+Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Types+Description.swift"; sourceTree = "<group>"; };
+		EE9F69D0280E7EE500799034 /* GSMLayout+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+Size.swift"; sourceTree = "<group>"; };
+		EE9F69D2280E941700799034 /* GSMLayout+WrapContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+WrapContent.swift"; sourceTree = "<group>"; };
+		EE9F69D4280EB24F00799034 /* GSMLayout+Layouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+Layouting.swift"; sourceTree = "<group>"; };
+		EED18D60280D855D00B3F508 /* GSMLayout+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+Coordinates.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,13 +255,13 @@
 				EE331905280D118E00766EBB /* Filters.swift */,
 				EE61A9C72808FB5A005266A0 /* Layoutable.swift */,
 				EE61A9F328094F28005266A0 /* Layoutable+GSMLayout.swift */,
+				EE9F69D0280E7EE500799034 /* GSMLayout+Size.swift */,
+				EE9F69D2280E941700799034 /* GSMLayout+WrapContent.swift */,
 				EE61A9D1280914E8005266A0 /* SizeCalculable.swift */,
 				EE61A9CF28090F61005266A0 /* AutoSizeCalculable.swift */,
 				EE61A9CB2808FFE6005266A0 /* Types.swift */,
 				EE61A9C52808F96E005266A0 /* GSM.swift */,
 				EE61A9AF2808F022005266A0 /* GSMLayout.swift */,
-				EE9ECA2F280C2D6B00B88375 /* Maker */,
-				EEB7824F280D099B00F25E03 /* Model */,
 				EE1C2DA22807FBC800286127 /* Extension */,
 				EE1C2DA62807FD9F00286127 /* Impl */,
 				302485C8F09179160B1CA760F903DF25 /* Pod */,
@@ -285,26 +287,11 @@
 				EE61A9CD280908E2005266A0 /* GSMLayout+Warning.swift */,
 				EE61A9D6280931C3005266A0 /* Coordinates.swift */,
 				EE61A9DA280938BF005266A0 /* TypesImpl.swift */,
+				EED18D60280D855D00B3F508 /* GSMLayout+Coordinates.swift */,
+				EE9F698E280E46E800799034 /* Types+Description.swift */,
+				EE9F69D4280EB24F00799034 /* GSMLayout+Layouting.swift */,
 			);
 			path = Impl;
-			sourceTree = "<group>";
-		};
-		EE9ECA2F280C2D6B00B88375 /* Maker */ = {
-			isa = PBXGroup;
-			children = (
-				EE9ECA30280C2D7F00B88375 /* ConstraintMaker.swift */,
-				EEB7824D280CEC9B00F25E03 /* ConstraintMakerExtendable.swift */,
-			);
-			path = Maker;
-			sourceTree = "<group>";
-		};
-		EEB7824F280D099B00F25E03 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EEB78250280D09AA00F25E03 /* ConstraintAttributes.swift */,
-				EEB78252280D0DCE00F25E03 /* LayoutConstraintItem.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,7 +460,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE61A9CE280908E2005266A0 /* GSMLayout+Warning.swift in Sources */,
-				EEB78251280D09AA00F25E03 /* ConstraintAttributes.swift in Sources */,
 				EE1C2DA82808000C00286127 /* Percent.swift in Sources */,
 				EE1C2DA52807FC1400286127 /* UIView+GSMLayout.swift in Sources */,
 				A561772887DBB1C460F1B9F13AFD6DA7 /* GSMLayout-dummy.m in Sources */,
@@ -481,13 +467,15 @@
 				EE61A9DB280938BF005266A0 /* TypesImpl.swift in Sources */,
 				EE61A9D028090F61005266A0 /* AutoSizeCalculable.swift in Sources */,
 				EE61A9F428094F28005266A0 /* Layoutable+GSMLayout.swift in Sources */,
+				EE9F69D5280EB24F00799034 /* GSMLayout+Layouting.swift in Sources */,
 				EE331906280D118E00766EBB /* Filters.swift in Sources */,
 				EE61A9C82808FB5A005266A0 /* Layoutable.swift in Sources */,
 				EE61A9CA2808FDF6005266A0 /* GSMSafeArea.swift in Sources */,
-				EEB78253280D0DCE00F25E03 /* LayoutConstraintItem.swift in Sources */,
+				EED18D61280D855D00B3F508 /* GSMLayout+Coordinates.swift in Sources */,
+				EE9F69D1280E7EE500799034 /* GSMLayout+Size.swift in Sources */,
+				EE9F698F280E46E800799034 /* Types+Description.swift in Sources */,
+				EE9F69D3280E941700799034 /* GSMLayout+WrapContent.swift in Sources */,
 				EE61A9D7280931C3005266A0 /* Coordinates.swift in Sources */,
-				EEB7824E280CEC9B00F25E03 /* ConstraintMakerExtendable.swift in Sources */,
-				EE9ECA31280C2D7F00B88375 /* ConstraintMaker.swift in Sources */,
 				EE61A9B02808F022005266A0 /* GSMLayout.swift in Sources */,
 				EE61A9D2280914E9005266A0 /* SizeCalculable.swift in Sources */,
 				EE61A9C62808F96E005266A0 /* GSM.swift in Sources */,
