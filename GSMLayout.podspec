@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GSMLayout'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'bout Fast Swift Views layouting without auto layout.'
   s.description      = 'About Fast Swift Views layouting without auto layout. pure code, full control and blazing fast.'
   s.homepage         = 'https://github.com/JiHoonAHN/GSMLayout'
