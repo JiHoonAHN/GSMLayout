@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     }
     func configureUI(){
         label.gsm.all()
-
     }
 }
 
