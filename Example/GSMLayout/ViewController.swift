@@ -14,21 +14,20 @@ class ViewController: UIViewController {
     private let label : UILabel = {
         let label = UILabel()
         label.text = "라벨"
-        label.backgroundColor = .red
+        label.backgroundColor = .blue
         return label
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(label)
-        configureUI()
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         configureUI()
     }
     func configureUI(){
-        label.gsm.top().left().right().bottom()
+        label.gsm.all()
     }
 }
 

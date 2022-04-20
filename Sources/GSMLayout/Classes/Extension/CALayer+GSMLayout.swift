@@ -18,11 +18,11 @@ extension CALayer: Layoutable {
         return sublayers ?? []
     }
 
-    public var pin: GSMLayout<CALayer> {
+    public var gsm: GSMLayout<CALayer> {
         return GSMLayout(view: self, keepTransform: true)
     }
 
-    public var pinFrame: GSMLayout<CALayer> {
+    public var gsmFrame: GSMLayout<CALayer> {
         return GSMLayout(view: self, keepTransform: false)
     }
 
@@ -32,7 +32,7 @@ extension CALayer: Layoutable {
              To adjust the layer's position and size, we don't set the layer's frame directly, because we want to keep the
              layer's transform.
              By setting the layer's center and bounds we really set the frame of the non-transformed layer, and this keep
-             the layer's transform. So layer's transforms won't be affected/altered by PinLayout.
+             the layer's transform. So layer's transforms won't be affected/altered by GSMLayout.
              */
             let size = bounds.size
             // See setRect(...) for details about this calculation.
@@ -53,7 +53,7 @@ extension CALayer: Layoutable {
              To adjust the layer's position and size, we don't set the layer's frame directly, because we want to keep the
              layer's transform.
              By setting the layer's center and bounds we really set the frame of the non-transformed layer, and this keep
-             the layer's transform. So layer's transforms won't be affected/altered by PinLayout.
+             the layer's transform. So layer's transforms won't be affected/altered by GSMLayout.
              */
 
             // NOTE: The center is offset by the layer.anchorPoint, so we have to take it into account.

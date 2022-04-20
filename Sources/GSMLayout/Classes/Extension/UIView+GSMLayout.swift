@@ -65,26 +65,26 @@ extension UIView: Layoutable, SizeCalculable {
 }
 
 extension UIView: AutoSizeCalculable {
-    private struct pinlayoutAssociatedKeys {
-        static var pinlayoutAutoSizingRect = UnsafeMutablePointer<Int8>.allocate(capacity: 1)
-        static var pinlayoutAutoSizingRectWithMargins = UnsafeMutablePointer<Int8>.allocate(capacity: 1)
+    private struct gsmlayoutAssociatedKeys {
+        static var gsmlayoutAutoSizingRect = UnsafeMutablePointer<Int8>.allocate(capacity: 1)
+        static var gsmlayoutAutoSizingRectWithMargins = UnsafeMutablePointer<Int8>.allocate(capacity: 1)
     }
 
     private var autoSizingRect: CGRect? {
         get {
-            return objc_getAssociatedObject(self, &pinlayoutAssociatedKeys.pinlayoutAutoSizingRect) as? CGRect
+            return objc_getAssociatedObject(self, &gsmlayoutAssociatedKeys.gsmlayoutAutoSizingRect) as? CGRect
         }
         set {
-            objc_setAssociatedObject(self, &pinlayoutAssociatedKeys.pinlayoutAutoSizingRect, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &gsmlayoutAssociatedKeys.gsmlayoutAutoSizingRect, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 
     private var autoSizingRectWithMargins: CGRect? {
         get {
-            return objc_getAssociatedObject(self, &pinlayoutAssociatedKeys.pinlayoutAutoSizingRectWithMargins) as? CGRect
+            return objc_getAssociatedObject(self, &gsmlayoutAssociatedKeys.gsmlayoutAutoSizingRectWithMargins) as? CGRect
         }
         set {
-            objc_setAssociatedObject(self, &pinlayoutAssociatedKeys.pinlayoutAutoSizingRectWithMargins, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &gsmlayoutAssociatedKeys.gsmlayoutAutoSizingRectWithMargins, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 

@@ -74,24 +74,22 @@ public enum FitType {
     case heightFlexible
     case content
 }
-@objc public enum WrapType : Int{
+
+@objc public enum WrapType: Int {
     case all
     case horizontally
     case vertically
 }
 
 /// UIViews's anchor definition
-@objc public enum LayoutDirection : Int{
+@objc public enum LayoutDirection: Int {
     case auto
     case ltr
     case rtl
 }
 
-@objc public enum GSMSafeAreaInsetsDidChangeMode : Int{
-    /// GSMLayout won't call `UIView.safeAreaInsetsDidChange` on iOS 8/9/10.
+@objc public enum GSMSafeAreaInsetsDidChangeMode: Int {
     case disable
-    /// GSMLayout will call `UIView.safeAreaInsetsDidChange` only if the UIView implement the GSMSafeAreaInsetsUpdate protocol.
     case optIn
-    /// GSMLayout will automatically calls `UIView.safeAreaInsetsDidChange` if the view has implemented this method.
     case always
 }

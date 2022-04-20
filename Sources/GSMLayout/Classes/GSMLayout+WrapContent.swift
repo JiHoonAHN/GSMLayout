@@ -18,7 +18,6 @@ extension GSMLayout {
         return wrapContent(.all, padding: PEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), { return "wrapContent()" })
     }
 
- 
     @discardableResult
     public func wrapContent(padding: CGFloat) -> GSMLayout {
         return wrapContent(.all, padding: PEdgeInsets(top: padding, left: padding, bottom: padding, right: padding), { return "wrapContent(padding: \(padding)" })
@@ -29,8 +28,6 @@ extension GSMLayout {
     public func wrapContent(padding: PEdgeInsets) -> GSMLayout {
         return wrapContent(.all, padding: padding, { return "wrapContent(padding: \(insetsDescription(padding))" })
     }
-
-   
     @discardableResult
     public func wrapContent(_ type: WrapType) -> GSMLayout {
         return wrapContent(type, padding: PEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), { return "wrapContent(\(type.description)" })
@@ -42,7 +39,7 @@ extension GSMLayout {
         return wrapContent(type, padding: PEdgeInsets(top: padding, left: padding, bottom: padding, right: padding), { return "wrapContent(\(type.description), padding: \(padding)" })
     }
 
-  
+   
     @discardableResult
     public func wrapContent(_ type: WrapType, padding: PEdgeInsets) -> GSMLayout {
         return wrapContent(type, padding: padding, { return "wrapContent(\(type.description), padding: \(insetsDescription(padding))" })

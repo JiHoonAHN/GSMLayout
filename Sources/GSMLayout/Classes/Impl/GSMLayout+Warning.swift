@@ -18,61 +18,63 @@ private var numberFormatter: NumberFormatter = {
     return numberFormatter
 }()
 
-extension GSMLayout{
-    
-     func pointContext(method: String, point: CGPoint) -> String {
+extension GSMLayout {
+    internal func pointContext(method: String, point: CGPoint) -> String {
         return "\(method)(to: CGPoint(x: \(point.x), y: \(point.y)))"
     }
     
-     func relativeEdgeContext(method: String, edge: VerticalEdge) -> String {
+    internal func relativeEdgeContext(method: String, edge: VerticalEdge) -> String {
         let edge = edge as! VerticalEdgeImpl<View>
         return "\(method)(to: .\(edge.type.rawValue), of: \(viewDescription(edge.view)))"
     }
     
-     func relativeEdgeContext(method: String, edge: HorizontalEdge) -> String {
+    internal func relativeEdgeContext(method: String, edge: HorizontalEdge) -> String {
         let edge = edge as! HorizontalEdgeImpl<View>
         return "\(method)(to: .\(edge.type.rawValue), of: \(viewDescription(edge.view))"
     }
     
-     func relativeAnchorContext(method: String, anchor: Anchor) -> String {
+    internal func relativeAnchorContext(method: String, anchor: Anchor) -> String {
         let anchor = anchor as! AnchorImpl<View>
         return "\(method)(to: .\(anchor.type.rawValue), of: \(viewDescription(anchor.view)))"
     }
     
-    func warnWontBeApplied(_ message: String, _ context: Context) {
-        guard GSM.logWarnings else {return}
-        warn("\(context()) won't be applied, \(message)")
+    internal func warnWontBeApplied(_ text: String, _ context: Context) {
+        guard GSM.logWarnings else { return }
+        warn("\(context()) won't be applied, \(text)")
+    }
+        
+    internal func warn(_ text: String) {
+        guard GSM.logWarnings else { return }
+        gsmLayoutDisplayConsoleWarning("GSMLayout Warning: \(text)", view)
     }
     
-    func warn(_ message : String) {
-        guard GSM.logWarnings else {return}
-        gsmLayoutConsoleWarning("GSMLayout Warning: \(message)", view)
-    }
     internal func warnPropertyAlreadySet(_ propertyName: String, propertyValue: CGFloat, _ context: Context) {
         guard GSM.logWarnings else { return }
-        gsmLayoutConsoleWarning("GSMLayout Conflict: \(context()) won't be applied since it value has already been set to \(propertyValue.description).", view)
+        gsmLayoutDisplayConsoleWarning("GSMLayout Conflict: \(context()) won't be applied since it value has already been set to \(propertyValue.description).", view)
     }
     
     internal func warnPropertyAlreadySet(_ propertyName: String, propertyValue: CGSize, _ context: Context) {
         guard GSM.logWarnings else { return }
-        gsmLayoutConsoleWarning("GSMLayout Conflict: \(context()) won't be applied since it value has already been set to CGSize(width: \(propertyValue.width.description), height: \(propertyValue.height.description)).", view)
+        gsmLayoutDisplayConsoleWarning("GSMLayout Conflict: \(context()) won't be applied since it value has already been set to CGSize(width: \(propertyValue.width.description), height: \(propertyValue.height.description)).", view)
     }
     
-    func warnConflict(_ context : Context, _ properties : [String : Any]){
-        guard GSM.logWarnings else {return}
+    internal func warnConflict(_ context: Context, _ properties: [String: Any]) {
+        guard GSM.logWarnings else { return }
         var warning = "GSMLayout Conflict: \(context()) won't be applied since it conflicts with the following already set properties:"
-        properties.forEach{
-            warning += "\n \($0.key): "
-            if let floatValue = $0.value as? CGFloat {
+        properties.forEach { (property) in
+            warning += "\n \(property.key): "
+            
+            if let floatValue = property.value as? CGFloat {
                 warning += "\(floatValue.description)"
             } else {
-                warning += "\($0.value)"
+                warning += "\(property.value)"
             }
         }
-        gsmLayoutConsoleWarning(warning, view)
+        
+        gsmLayoutDisplayConsoleWarning(warning, view)
     }
     
-    func displayLayoutWarnings() {
+    internal func displayLayoutWarnings() {
         if !Thread.isMainThread {
             warn("Layout must be executed from the Main Thread!")
         }
@@ -99,23 +101,23 @@ extension GSMLayout{
             }
         }
     }
-    
-    func viewDescription(_ view: View) -> String {
+
+    internal func viewDescription(_ view: View) -> String {
         let rect = view.getRect(keepTransform: keepTransform)
         return "(\(viewName(view)), Frame: \(rect))"
     }
     
-    func viewName(_ view: View) -> String {
+    internal func viewName(_ view: View) -> String {
         return "\(type(of: view))"
     }
-    
-    func insetsDescription(_ insets: PEdgeInsets) -> String {
+
+    internal func insetsDescription(_ insets: PEdgeInsets) -> String {
         return "UIEdgeInsets(top: \(insets.top), left: \(insets.left), bottom: \(insets.bottom), right: \(insets.right))"
     }
-    
-    func gsmLayoutConsoleWarning(_ message : String ,_ view : View){
-        var displayText = "\n⚠️ \(message)"
-        
+
+    internal func gsmLayoutDisplayConsoleWarning(_ text: String, _ view: View) {
+        var displayText = "\n👉 \(text)"
+
         let rect = view.getRect(keepTransform: keepTransform)
         let x = numberFormatter.string(from: NSNumber(value: Float(rect.origin.x)))!
         let y = numberFormatter.string(from: NSNumber(value: Float(rect.origin.y)))!
@@ -123,10 +125,10 @@ extension GSMLayout{
         let height = numberFormatter.string(from: NSNumber(value: Float(rect.size.height)))!
         let viewName = "\(type(of: view))"
         displayText += "\n(Layouted view info: Type: \(viewName), Frame: x: \(x), y: \(y), width: \(width), height: \(height))"
-        
+
         var currentView = view
-        var hierarchy : [String] = []
-        while let parent = currentView.superview{
+        var hierarchy: [String] = []
+        while let parent = currentView.superview {
             hierarchy.insert("\(type(of: parent))", at: 0)
             currentView = parent as! View
         }
@@ -137,9 +139,10 @@ extension GSMLayout{
             displayText += ", Superviews: \(hierarchy.flatMap({ $0 }).joined(separator: " -> "))"
             #endif
         }
+
         displayText += ", Debug description: \(view.debugDescription))\n"
 
         print(displayText)
-        GSM.lastWarningText = message
+        GSM.lastWarningText = text
     }
 }

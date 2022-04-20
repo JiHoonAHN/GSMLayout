@@ -13,12 +13,12 @@ import AppKit
 extension NSView: Layoutable {
     public typealias View = NSView
 
-    public var pin: GSMLayout<NSView> {
-        return PinLayout(view: self, keepTransform: true)
+    public var gsm: GSMLayout<NSView> {
+        return GSMLayout(view: self, keepTransform: true)
     }
 
-    public var pinFrame: GSMLayout<NSView> {
-        return PinLayout(view: self, keepTransform: false)
+    public var gsmFrame: GSMLayout<NSView> {
+        return GSMLayout(view: self, keepTransform: false)
     }
 
     public func getRect(keepTransform: Bool) -> CGRect {
@@ -44,7 +44,7 @@ extension NSView: Layoutable {
     }
 
     public func isLTR() -> Bool {
-        switch Pin.layoutDirection {
+        switch GSM.layoutDirection {
         case .auto: return self.userInterfaceLayoutDirection == .leftToRight
         case .ltr:  return true
         case .rtl:  return false

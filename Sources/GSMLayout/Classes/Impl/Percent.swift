@@ -5,17 +5,15 @@
 //  Created by Ji-hoon Ahn on 2022/04/14.
 //
 
-import Foundation
 #if os(iOS) || os(tvOS)
-import UIKit
+    import UIKit
 #else
-import AppKit
+    import AppKit
 #endif
 
-public struct Percent{
-    
-    let value : CGFloat
-    
+public struct Percent {
+    let value: CGFloat
+
     public func of(_ value: CGFloat) -> CGFloat {
         return value * self.value / 100
     }

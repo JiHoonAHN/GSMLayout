@@ -8,26 +8,26 @@
 import Foundation
 
 #if os(iOS) || os(tvOS)
-import UIKit
-public typealias PEdgeInsets = UIEdgeInsets
+    import UIKit
+    public typealias PEdgeInsets = UIEdgeInsets
 #else
-import AppKit
-public typealias PEdgeInsets = NSEdgeInsets
+    import AppKit
+    public typealias PEdgeInsets = NSEdgeInsets
 #endif
 
 public class GSMLayout<View: Layoutable> {
     let view : View
     let keepTransform: Bool
     
-    var _top : CGFloat?
-    var _left : CGFloat?
-    var _bottom : CGFloat?
-    var _right : CGFloat?
+    var _top: CGFloat?       // offset from superview's top edge
+    var _left: CGFloat?      // offset from superview's left edge
+    var _bottom: CGFloat?    // offset from superview's top edge
+    var _right: CGFloat?     // offset from superview's left edge
     
-    var _hCenter :  CGFloat?
-    var _vCenter : CGFloat?
+    var _hCenter: CGFloat?
+    var _vCenter: CGFloat?
     
-    var width : CGFloat?
+    var width: CGFloat?
     var minWidth: CGFloat?
     var maxWidth: CGFloat?
     var height: CGFloat?
@@ -35,6 +35,7 @@ public class GSMLayout<View: Layoutable> {
     var maxHeight: CGFloat?
     
     var adjustSizeType: AdjustSizeType?
+    
     var shouldKeepViewDimension: Bool {
         return adjustSizeType == nil
     }
@@ -56,17 +57,19 @@ public class GSMLayout<View: Layoutable> {
     
     var isLayouted = false
     
-    init(view : View,keepTransform : Bool){
+    init(view: View, keepTransform: Bool) {
         self.view = view
         self.keepTransform = keepTransform
-#if os(iOS) || os(tvOS)
+
+        #if os(iOS) || os(tvOS)
         GSM.initGSMLayout()
-#endif
+        #endif
     }
     deinit{
         if !isLayouted && GSM.logMissingLayoutCalls{
             warn("GSMLayout commands have been issued without calling the 'layout()' method to complete the layout. (These warnings can be disabled by setting GSM.logMissingLayoutCalls to false)")
         }
+        apply()
     }
     
 #if os(iOS) || os(tvOS)
@@ -85,7 +88,7 @@ public class GSMLayout<View: Layoutable> {
     public var readableMargins: PEdgeInsets {
         guard #available(iOS 9.0, *) else { return .zero }
         guard let view = view as? UIView else { return .zero }
-
+        
         let layoutFrame = view.readableContentGuide.layoutFrame
         guard !layoutFrame.isEmpty else { return .zero }
         
@@ -93,7 +96,7 @@ public class GSMLayout<View: Layoutable> {
                             bottom: view.frame.height - layoutFrame.origin.y - layoutFrame.height,
                             right: view.frame.width - layoutFrame.origin.x - layoutFrame.width)
     }
-
+    
     public var layoutMargins: PEdgeInsets {
         guard let view = view as? UIView else { return .zero }
         return view.layoutMargins
@@ -147,7 +150,7 @@ public class GSMLayout<View: Layoutable> {
         func context() -> String { return "start(\(offset.description))" }
         return isLTR() ? left(offset, context) : right(offset, context)
     }
-
+    
     @discardableResult
     public func start(_ insets: PEdgeInsets) -> GSMLayout {
         func context() -> String { return "start(\(insetsDescription(insets))" }
@@ -158,27 +161,27 @@ public class GSMLayout<View: Layoutable> {
     public func bottom(_ offset: CGFloat = 0) -> GSMLayout {
         return bottom(offset, { return "bottom(\(offset.optionnalDescription))" })
     }
-
+    
     @discardableResult
     public func bottom(_ offset: Percent) -> GSMLayout {
         return bottom(offset, { return "bottom(\(offset.description))" })
     }
-
+    
     @discardableResult
     public func bottom(_ insets: PEdgeInsets) -> GSMLayout {
         return bottom(insets.bottom, { return "bottom(\(insetsDescription(insets))" })
     }
-
+    
     @discardableResult
     public func right(_ offset: CGFloat = 0) -> GSMLayout {
         return right(offset, { return "right(\(offset.optionnalDescription))" })
     }
-
+    
     @discardableResult
     public func right(_ offset: Percent) -> GSMLayout {
         return right(offset, { return "right(\(offset.description))" })
     }
-
+    
     @discardableResult
     public func right(_ insets: PEdgeInsets) -> GSMLayout {
         return right(insets.right, { return "right(\(insetsDescription(insets))" })
@@ -189,19 +192,19 @@ public class GSMLayout<View: Layoutable> {
         func context() -> String { return "end(\(margin.optionnalDescription))" }
         return isLTR() ? right(margin, context) : left(margin, context)
     }
-
+    
     @discardableResult
     public func end(_ offset: Percent) -> GSMLayout {
         func context() -> String { return "end(\(offset.description))" }
         return isLTR() ? right(offset, context) : left(offset, context)
     }
-
+    
     @discardableResult
     public func end(_ insets: PEdgeInsets) -> GSMLayout {
         func context() -> String { return "end(\(insetsDescription(insets))" }
         return isLTR() ? right(insets.right, context) : left(insets.left, context)
     }
-
+    
     @discardableResult
     public func hCenter(_ margin: CGFloat = 0) -> GSMLayout {
         func context() -> String { return "hCenter(\(margin.optionnalDescription))" }
@@ -209,7 +212,7 @@ public class GSMLayout<View: Layoutable> {
         setHorizontalCenter((layoutSuperviewRect.width / 2) + margin, context)
         return self
     }
-
+    
     @discardableResult
     public func hCenter(_ offset: Percent) -> GSMLayout {
         func context() -> String { return "hCenter(\(offset.description))" }
@@ -217,7 +220,7 @@ public class GSMLayout<View: Layoutable> {
         setHorizontalCenter((layoutSuperviewRect.width / 2) + offset.of(layoutSuperviewRect.width), context)
         return self
     }
-
+    
     @discardableResult
     public func vCenter(_ margin: CGFloat = 0) -> GSMLayout {
         func context() -> String { return "vCenter(\(margin.optionnalDescription))" }
@@ -225,7 +228,7 @@ public class GSMLayout<View: Layoutable> {
         setVerticalCenter((layoutSuperviewRect.height / 2) + margin, context)
         return self
     }
-
+    
     @discardableResult
     public func vCenter(_ offset: Percent) -> GSMLayout {
         func context() -> String { return "vCenter(\(offset.description))" }
@@ -245,13 +248,14 @@ public class GSMLayout<View: Layoutable> {
 }
 
 extension GSMLayout{
-    func layoutSuperviewRect(_ context : Context) -> CGRect?{
-        if let superview = view.superview{
+    func layoutSuperviewRect(_ context: Context) -> CGRect? {
+        if let superview = view.superview {
             return superview.getRect(keepTransform: keepTransform)
-        }else{
+        } else {
             return nil
         }
     }
+    
     func layoutSuperview(_ context: Context) -> View? {
         if let superview = view.superview {
             return superview as? View
@@ -259,10 +263,11 @@ extension GSMLayout{
             return nil
         }
     }
+    
     func referenceSuperview(_ referenceView: View, _ context: Context) -> View? {
-        if let superview = referenceView.superview{
+        if let superview = referenceView.superview {
             return superview as? View
-        }else{
+        } else {
             warnWontBeApplied("the reference view \(viewDescription(referenceView)) must be added as a sub-view before being used as a reference.", context)
             return nil
         }
