@@ -25,11 +25,7 @@ extension ConstraintView : LayoutConstraintItem {
 
 extension LayoutConstraintItem {
     
-    internal func prepare() {
-        if let view = self as? ConstraintView {
-            view.translatesAutoresizingMaskIntoConstraints = false
-        }
-    }
+
     
     internal var superview: ConstraintView? {
         if let view = self as? ConstraintView {

@@ -145,7 +145,6 @@ public class ConstraintMaker {
     
     internal init(item: LayoutConstraintItem) {
         self.item = item
-        self.item.prepare()
     }
     
     internal func makeExtendableWithAttributes(_ attributes: ConstraintAttributes) -> ConstraintMakerExtendable {

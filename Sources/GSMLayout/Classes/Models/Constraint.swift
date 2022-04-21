@@ -301,8 +301,6 @@ public final class Constraint {
                 updateLayoutConstraint.constant = self.constant.constraintConstantTargetValueFor(layoutAttribute: updateLayoutAttribute)
             }
         } else {
-            print(layoutConstraints.debugDescription)
-            NSLayoutConstraint.activate(layoutConstraints)
             
             item.add(constraints: [self])
         }
@@ -314,6 +312,7 @@ public final class Constraint {
             return
         }
         let layoutConstraints = self.layoutConstraints
+        
         NSLayoutConstraint.deactivate(layoutConstraints)
         item.remove(constraints: [self])
     }
