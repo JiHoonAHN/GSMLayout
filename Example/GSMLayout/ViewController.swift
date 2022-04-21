@@ -27,7 +27,10 @@ class ViewController: UIViewController {
         configureUI()
     }
     func configureUI(){
-        label.gsm.all()
+        label.gsm.makeConstraints {
+            $0.right.left.top.bottom.equalToSuperview()
+        }
     }
 }
+
 
