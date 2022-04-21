@@ -11,7 +11,7 @@ import GSMLayout
 
 class ViewController: UIViewController {
 
-    private let label : UILabel = {
+    private lazy var  label : UILabel = {
         let label = UILabel()
         label.text = "라벨"
         label.backgroundColor = .blue
