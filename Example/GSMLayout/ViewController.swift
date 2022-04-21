@@ -11,11 +11,11 @@ import GSMLayout
 
 class ViewController: UIViewController {
 
-    private let label : UILabel = {
-        let label = UILabel()
-        label.text = "라벨"
-        label.backgroundColor = .blue
-        return label
+    private lazy var label : UIButton = {
+        let btn = UIButton()
+        btn.addTarget(self, action: #selector(action), for: .touchUpInside)
+        btn.backgroundColor = .blue
+        return btn
     }()
     
     override func viewDidLoad() {
@@ -28,6 +28,11 @@ class ViewController: UIViewController {
     }
     func configureUI(){
         label.gsm.all()
+    }
+    
+    @objc func action(){
+        print("Action")
+        label.gsm.size(20)
     }
 }
 
