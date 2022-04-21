@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         configureUI()
     }
     func configureUI(){
-        label.gsm.all()
+        label.gsm.left().right().bottom().top()
     }
 }
 
