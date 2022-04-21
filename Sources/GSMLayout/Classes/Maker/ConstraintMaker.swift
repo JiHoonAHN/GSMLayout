@@ -145,6 +145,9 @@ public class ConstraintMaker {
     
     internal init(item: LayoutConstraintItem) {
         self.item = item
+        if let view = item as? ConstraintView{
+            view.translatesAutoresizingMaskIntoConstraints = false
+        }
     }
     
     internal func makeExtendableWithAttributes(_ attributes: ConstraintAttributes) -> ConstraintMakerExtendable {
