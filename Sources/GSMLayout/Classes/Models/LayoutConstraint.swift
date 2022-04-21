@@ -24,7 +24,7 @@ internal func ==(lhs: LayoutConstraint, rhs: LayoutConstraint) -> Bool {
     // If firstItem or secondItem on either constraint has a dangling pointer
     // this comparison can cause a crash. The solution for this is to ensure
     // your layout code hold strong references to things like Views, LayoutGuides
-    // and LayoutAnchors as SnapKit will not keep strong references to any of these.
+    // and LayoutAnchors as GSMLayout will not keep strong references to any of these.
     guard lhs.firstAttribute == rhs.firstAttribute &&
           lhs.secondAttribute == rhs.secondAttribute &&
           lhs.relation == rhs.relation &&

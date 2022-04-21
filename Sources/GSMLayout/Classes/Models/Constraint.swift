@@ -280,7 +280,7 @@ public final class Constraint {
 
     internal func activateIfNeeded(updatingExisting: Bool = false) {
         guard let item = self.from.layoutConstraintItem else {
-            print("WARNING: SnapKit failed to get from item from constraint. Activate will be a no-op.")
+            print("WARNING: GSMLayout failed to get from item from constraint. Activate will be a no-op.")
             return
         }
         let layoutConstraints = self.layoutConstraints
@@ -302,14 +302,15 @@ public final class Constraint {
             }
         } else {
             print(layoutConstraints.debugDescription)
-//            NSLayoutConstraint.activate(layoutConstraints)
+            NSLayoutConstraint.activate(layoutConstraints)
+            
             item.add(constraints: [self])
         }
     }
 
     internal func deactivateIfNeeded() {
         guard let item = self.from.layoutConstraintItem else {
-            print("WARNING: SnapKit failed to get from item from constraint. Deactivate will be a no-op.")
+            print("WARNING: GSMLayout failed to get from item from constraint. Deactivate will be a no-op.")
             return
         }
         let layoutConstraints = self.layoutConstraints
