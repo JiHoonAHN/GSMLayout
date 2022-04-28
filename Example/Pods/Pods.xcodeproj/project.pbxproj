@@ -17,6 +17,8 @@
 		D6A2F8B8B31A4E912EF06DD42E387450 /* Pods-GSMLayout_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A51B2991876C5A7AE77FB9025648BBC /* Pods-GSMLayout_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE1C2DA52807FC1400286127 /* UIView+GSMLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */; };
 		EE1C2DA82808000C00286127 /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C2DA72808000C00286127 /* Percent.swift */; };
+		EE216BE92819626C0082641F /* GSMLayout+CoordinatorMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE216BE82819626C0082641F /* GSMLayout+CoordinatorMaker.swift */; };
+		EE216BEC281963F80082641F /* GSMLayout+CoordinatorMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE216BEB281963F80082641F /* GSMLayout+CoordinatorMakerExtendable.swift */; };
 		EE331906280D118E00766EBB /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE331905280D118E00766EBB /* Filters.swift */; };
 		EE61A9B02808F022005266A0 /* GSMLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9AF2808F022005266A0 /* GSMLayout.swift */; };
 		EE61A9C62808F96E005266A0 /* GSM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A9C52808F96E005266A0 /* GSM.swift */; };
@@ -38,6 +40,8 @@
 		EE9F6A0C280ED61E00799034 /* CALayer+GSMLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F6A0B280ED61E00799034 /* CALayer+GSMLayout.swift */; };
 		EE9F6A33280EDC7700799034 /* GSMLayout+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F6A32280EDC7700799034 /* GSMLayout+Relative.swift */; };
 		EE9F6A35280EDCE300799034 /* GSMLayout+Between.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F6A34280EDCE300799034 /* GSMLayout+Between.swift */; };
+		EE9FFCF228198CA800E879A9 /* GSMLayout+ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9FFCF128198CA800E879A9 /* GSMLayout+ConstraintMakerRelatable.swift */; };
+		EE9FFCF428198ED400E879A9 /* GSMLayout+ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9FFCF328198ED400E879A9 /* GSMLayout+ConstraintMakerEditable.swift */; };
 		EED18D61280D855D00B3F508 /* GSMLayout+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED18D60280D855D00B3F508 /* GSMLayout+Coordinates.swift */; };
 		F729CB5FB50E2A2AE63250D2761E44A4 /* Pods-GSMLayout_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 543817C1A312BE52FCAE53EAF65BE146 /* Pods-GSMLayout_Tests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -93,6 +97,8 @@
 		ED23A4AB359A22268D7A2A18E2D129D4 /* GSMLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GSMLayout.modulemap; sourceTree = "<group>"; };
 		EE1C2DA42807FC1400286127 /* UIView+GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GSMLayout.swift"; sourceTree = "<group>"; };
 		EE1C2DA72808000C00286127 /* Percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Percent.swift; sourceTree = "<group>"; };
+		EE216BE82819626C0082641F /* GSMLayout+CoordinatorMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+CoordinatorMaker.swift"; sourceTree = "<group>"; };
+		EE216BEB281963F80082641F /* GSMLayout+CoordinatorMakerExtendable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+CoordinatorMakerExtendable.swift"; sourceTree = "<group>"; };
 		EE331905280D118E00766EBB /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		EE61A9AF2808F022005266A0 /* GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSMLayout.swift; sourceTree = "<group>"; };
 		EE61A9C52808F96E005266A0 /* GSM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSM.swift; sourceTree = "<group>"; };
@@ -115,6 +121,8 @@
 		EE9F6A0B280ED61E00799034 /* CALayer+GSMLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+GSMLayout.swift"; sourceTree = "<group>"; };
 		EE9F6A32280EDC7700799034 /* GSMLayout+Relative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+Relative.swift"; sourceTree = "<group>"; };
 		EE9F6A34280EDCE300799034 /* GSMLayout+Between.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+Between.swift"; sourceTree = "<group>"; };
+		EE9FFCF128198CA800E879A9 /* GSMLayout+ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+ConstraintMakerRelatable.swift"; sourceTree = "<group>"; };
+		EE9FFCF328198ED400E879A9 /* GSMLayout+ConstraintMakerEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+ConstraintMakerEditable.swift"; sourceTree = "<group>"; };
 		EED18D60280D855D00B3F508 /* GSMLayout+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSMLayout+Coordinates.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,6 +305,7 @@
 		EE1C2DA62807FD9F00286127 /* Impl */ = {
 			isa = PBXGroup;
 			children = (
+				EE216BEA281963970082641F /* Maker */,
 				EE61A9D6280931C3005266A0 /* Coordinates.swift */,
 				EE1C2DA72808000C00286127 /* Percent.swift */,
 				EE61A9C92808FDF6005266A0 /* GSMSafeArea.swift */,
@@ -307,6 +316,17 @@
 				EE9F698E280E46E800799034 /* Types+Description.swift */,
 			);
 			path = Impl;
+			sourceTree = "<group>";
+		};
+		EE216BEA281963970082641F /* Maker */ = {
+			isa = PBXGroup;
+			children = (
+				EE216BE82819626C0082641F /* GSMLayout+CoordinatorMaker.swift */,
+				EE9FFCF128198CA800E879A9 /* GSMLayout+ConstraintMakerRelatable.swift */,
+				EE216BEB281963F80082641F /* GSMLayout+CoordinatorMakerExtendable.swift */,
+				EE9FFCF328198ED400E879A9 /* GSMLayout+ConstraintMakerEditable.swift */,
+			);
+			path = Maker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,9 +497,11 @@
 				EE61A9CE280908E2005266A0 /* GSMLayout+Warning.swift in Sources */,
 				EE1C2DA82808000C00286127 /* Percent.swift in Sources */,
 				EE1C2DA52807FC1400286127 /* UIView+GSMLayout.swift in Sources */,
+				EE9FFCF428198ED400E879A9 /* GSMLayout+ConstraintMakerEditable.swift in Sources */,
 				A561772887DBB1C460F1B9F13AFD6DA7 /* GSMLayout-dummy.m in Sources */,
 				EE61A9CC2808FFE6005266A0 /* Types.swift in Sources */,
 				EE61A9DB280938BF005266A0 /* TypesImpl.swift in Sources */,
+				EE216BE92819626C0082641F /* GSMLayout+CoordinatorMaker.swift in Sources */,
 				EE61A9D028090F61005266A0 /* AutoSizeCalculable.swift in Sources */,
 				EE61A9F428094F28005266A0 /* Layoutable+GSMLayout.swift in Sources */,
 				EE9F69D5280EB24F00799034 /* GSMLayout+Layouting.swift in Sources */,
@@ -493,10 +515,12 @@
 				EE9F698F280E46E800799034 /* Types+Description.swift in Sources */,
 				EE9F69D3280E941700799034 /* GSMLayout+WrapContent.swift in Sources */,
 				EE61A9D7280931C3005266A0 /* Coordinates.swift in Sources */,
+				EE9FFCF228198CA800E879A9 /* GSMLayout+ConstraintMakerRelatable.swift in Sources */,
 				EE61A9B02808F022005266A0 /* GSMLayout.swift in Sources */,
 				EE61A9D2280914E9005266A0 /* SizeCalculable.swift in Sources */,
 				EE9F6A04280ECEE300799034 /* PEdgeInsets+Operators.swift in Sources */,
 				EE9F6A35280EDCE300799034 /* GSMLayout+Between.swift in Sources */,
+				EE216BEC281963F80082641F /* GSMLayout+CoordinatorMakerExtendable.swift in Sources */,
 				EE61A9C62808F96E005266A0 /* GSM.swift in Sources */,
 				EE9F6A33280EDC7700799034 /* GSMLayout+Relative.swift in Sources */,
 			);

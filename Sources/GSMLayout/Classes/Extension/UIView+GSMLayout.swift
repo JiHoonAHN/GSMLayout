@@ -13,9 +13,13 @@ import UIKit
 extension UIView: Layoutable, SizeCalculable {
     public typealias View = UIView
 
+    public func gsm(closure : ( GSMLayoutConstraintMaker<View>) -> Void){
+        GSMLayoutConstraintMaker(view: self, closure: closure)
+    }
+
+    
     public var gsm: GSMLayout<UIView> {
         return GSMLayout(view: self, keepTransform: true)
-        
     }
 
     public var gsmFrame: GSMLayout<UIView> {
