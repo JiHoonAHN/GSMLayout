@@ -4,6 +4,10 @@
     import AppKit
 #endif
 
-public class GSMLayoutConstraintMakerEditable  {
+public class GSMLayoutConstraintMakerFinalizable  {
+    let description : String
     
+    init(_ description : String){
+        self.description = description
+    }
 }

@@ -14,7 +14,7 @@ extension UIView: Layoutable, SizeCalculable {
     public typealias View = UIView
 
     public func gsm(closure : ( GSMLayoutConstraintMaker<View>) -> Void){
-        GSMLayoutConstraintMaker(view: self, closure: closure)
+        GSMLayoutConstraintMaker.makeConstraints(view: self, closure: closure)
     }
 
     

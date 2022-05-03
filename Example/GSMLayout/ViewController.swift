@@ -27,17 +27,10 @@ class ViewController: UIViewController {
         configureUI()
     }
     func configureUI(){
-        label.gsm { $0
-            .left.top.right.bottom.equalTo()
+        label.gsm {
+            $0.right.left.bottom.width.equalTo()
+            $0.top.left.centerX.equalTo()
         }
-        
-        
-//        label.gsm
-//            .top()
-//            .bottom()
-//            .left()
-//            .right()
-        
     }
 }
 

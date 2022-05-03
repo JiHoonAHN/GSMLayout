@@ -48,9 +48,11 @@ public class  GSMLayoutConstraintMaker<View : Layoutable>{
     
     private var descriptions = [String]()
     
-    internal func prepareConstraints( closure: (GSMLayoutConstraintMaker) -> Void) -> [String] {
+    static func prepareConstraints(view : View, closure: (GSMLayoutConstraintMaker) -> Void) -> [String] {
+        let maker = GSMLayoutConstraintMaker(view: view)
+        closure(maker)
         var constraints: [String] = []
-        for description in descriptions {
+        for description in maker.descriptions {
             constraints.append(description)
         }
         return constraints
@@ -61,9 +63,14 @@ public class  GSMLayoutConstraintMaker<View : Layoutable>{
         return GSMLayoutConstraintMakerExtendable(attributes)
     }
     
-    internal init(view : View, closure : ((GSMLayoutConstraintMaker) -> Void)) {
+    static func makeConstraints(view : View, closure: (( GSMLayoutConstraintMaker) -> Void)){
+        let constraint = prepareConstraints(view: view, closure: closure)
+        for constraint in constraint {
+            print("Constraint : \(constraint)")
+        }
+    }
+    
+    internal init(view : View) {
         self.view = view
-        descriptions = prepareConstraints(closure: closure)
-        print(descriptions.first) // -> nil
     }
 }

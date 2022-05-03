@@ -12,14 +12,16 @@ public class GSMLayoutConstraintMakerRelatable {
         self.description = description
     }
     
-    func relatedTo(file: String, line: UInt) -> GSMLayoutConstraintMakerEditable{
-        return GSMLayoutConstraintMakerEditable()
+    func relatedTo(file: String, line: UInt) -> GSMLayoutConstraintMakerFinalizable{
+        
+        let editable = GSMLayoutConstraintMakerFinalizable(self.description)
+        print("Relatable : \(description)")
+//        editable.description =
+        return GSMLayoutConstraintMakerFinalizable(description)
     }
     
     @discardableResult
-    public func equalTo( _ file: String = #file, _ line: UInt = #line) -> GSMLayoutConstraintMakerEditable {
-        print("Realod")
+    public func equalTo( _ file: String = #file, _ line: UInt = #line) -> GSMLayoutConstraintMakerFinalizable {
         return self.relatedTo(file: file, line: line)
     }
 }
-
