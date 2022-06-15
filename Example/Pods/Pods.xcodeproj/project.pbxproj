@@ -69,7 +69,7 @@
 		06DCFB25686938FF07F8CA0653D702CB /* Pods-GSMLayout_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GSMLayout_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		0A51B2991876C5A7AE77FB9025648BBC /* Pods-GSMLayout_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GSMLayout_Example-umbrella.h"; sourceTree = "<group>"; };
 		0B95E88FCAE7EC94947F0E00B7F2EC11 /* GSMLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GSMLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D53EA429202CEB446E1A1B3A0A4E1B5 /* Pods-GSMLayout_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GSMLayout_Example"; path = Pods_GSMLayout_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D53EA429202CEB446E1A1B3A0A4E1B5 /* Pods_GSMLayout_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GSMLayout_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2169D480B58717AFBB604C1D03E8049A /* Pods-GSMLayout_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GSMLayout_Tests-Info.plist"; sourceTree = "<group>"; };
 		351ED40DB699E72E6B7CCEF7AF629F79 /* Pods-GSMLayout_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GSMLayout_Tests.modulemap"; sourceTree = "<group>"; };
 		3DCCF26E0FA8652B0286AA7339B73E44 /* GSMLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GSMLayout-Info.plist"; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 		7B9A4E7AAA6DDCF814B17EEED5485105 /* GSMLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GSMLayout-umbrella.h"; sourceTree = "<group>"; };
 		8F470B7BAE13115E1DD8EB707E1F5BC0 /* Pods-GSMLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GSMLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		949EF2E905298161A1A07C4CB7B4C1DE /* Pods-GSMLayout_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GSMLayout_Example.release.xcconfig"; sourceTree = "<group>"; };
-		95F82D68160BE1ACF0BE92B094DE313D /* Pods-GSMLayout_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GSMLayout_Tests"; path = Pods_GSMLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F82D68160BE1ACF0BE92B094DE313D /* Pods_GSMLayout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GSMLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1F3D869430FF9359EFCA7180EBBCEC /* Pods-GSMLayout_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GSMLayout_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D5F008832CAE955E0E8360F41DB53AB /* Pods-GSMLayout_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GSMLayout_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -204,8 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				0B95E88FCAE7EC94947F0E00B7F2EC11 /* GSMLayout.framework */,
-				1D53EA429202CEB446E1A1B3A0A4E1B5 /* Pods-GSMLayout_Example */,
-				95F82D68160BE1ACF0BE92B094DE313D /* Pods-GSMLayout_Tests */,
+				1D53EA429202CEB446E1A1B3A0A4E1B5 /* Pods_GSMLayout_Example.framework */,
+				95F82D68160BE1ACF0BE92B094DE313D /* Pods_GSMLayout_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -386,7 +386,7 @@
 			);
 			name = "Pods-GSMLayout_Example";
 			productName = Pods_GSMLayout_Example;
-			productReference = 1D53EA429202CEB446E1A1B3A0A4E1B5 /* Pods-GSMLayout_Example */;
+			productReference = 1D53EA429202CEB446E1A1B3A0A4E1B5 /* Pods_GSMLayout_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4D31828C85CD3CB5D6CB115F5F26E729 /* Pods-GSMLayout_Tests */ = {
@@ -405,7 +405,7 @@
 			);
 			name = "Pods-GSMLayout_Tests";
 			productName = Pods_GSMLayout_Tests;
-			productReference = 95F82D68160BE1ACF0BE92B094DE313D /* Pods-GSMLayout_Tests */;
+			productReference = 95F82D68160BE1ACF0BE92B094DE313D /* Pods_GSMLayout_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		760354D068C1C1543CF8852B86212B60 /* GSMLayout */ = {
@@ -433,10 +433,10 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					760354D068C1C1543CF8852B86212B60 = {
-						LastSwiftMigration = 1330;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -609,7 +609,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -637,7 +637,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GSMLayout_Example/Pods-GSMLayout_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GSMLayout_Example/Pods-GSMLayout_Example.modulemap";
@@ -669,7 +669,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GSMLayout_Tests/Pods-GSMLayout_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GSMLayout_Tests/Pods-GSMLayout_Tests.modulemap";
@@ -703,7 +703,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GSMLayout/GSMLayout-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GSMLayout/GSMLayout-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GSMLayout/GSMLayout.modulemap";
 				PRODUCT_MODULE_NAME = GSMLayout;
@@ -711,7 +711,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -734,7 +734,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GSMLayout_Tests/Pods-GSMLayout_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GSMLayout_Tests/Pods-GSMLayout_Tests.modulemap";
@@ -767,7 +767,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GSMLayout/GSMLayout-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GSMLayout/GSMLayout-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GSMLayout/GSMLayout.modulemap";
 				PRODUCT_MODULE_NAME = GSMLayout;
@@ -776,7 +776,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -833,7 +833,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -859,7 +859,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GSMLayout_Example/Pods-GSMLayout_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GSMLayout_Example/Pods-GSMLayout_Example.modulemap";

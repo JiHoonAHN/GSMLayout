@@ -5,9 +5,9 @@
 #endif
 
 public class GSMLayoutConstraintMakerFinalizable  {
-    let description : String
+    let description : [String]
     
-    init(_ description : String){
+    init(_ description : [String]){
         self.description = description
     }
 }

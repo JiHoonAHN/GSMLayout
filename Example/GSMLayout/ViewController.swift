@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     func configureUI(){
         label.gsm {
             $0.right.left.bottom.width.equalTo()
-            $0.top.left.centerX.equalTo()
+            $0.top.centerX.equalTo()
         }
     }
 }

@@ -6,9 +6,9 @@
 
 public class GSMLayoutConstraintMakerRelatable {
     
-    internal var description: String
+    internal var description: [String]
     
-    internal init(_ description: String) {
+    internal init(_ description: [String]) {
         self.description = description
     }
     
@@ -16,7 +16,7 @@ public class GSMLayoutConstraintMakerRelatable {
         
         let editable = GSMLayoutConstraintMakerFinalizable(self.description)
         print("Relatable : \(description)")
-//        editable.description =
+        
         return GSMLayoutConstraintMakerFinalizable(description)
     }
     

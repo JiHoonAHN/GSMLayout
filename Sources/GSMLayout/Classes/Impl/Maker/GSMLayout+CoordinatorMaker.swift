@@ -60,7 +60,7 @@ public class  GSMLayoutConstraintMaker<View : Layoutable>{
     
     func makeExtendableWithAttributes(_ attributes : String) -> GSMLayoutConstraintMakerExtendable{
         self.descriptions.append(attributes)
-        return GSMLayoutConstraintMakerExtendable(attributes)
+        return GSMLayoutConstraintMakerExtendable([attributes])
     }
     
     static func makeConstraints(view : View, closure: (( GSMLayoutConstraintMaker) -> Void)){
